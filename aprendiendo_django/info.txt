@@ -1,0 +1,18 @@
+Master en Python: Aprender Python 3, Django, Flask y Tkinter
+
+Routing y vistas en Django: Crear vista y rutas
+
+
+08:24
+Múltiples vistas y urls
+05:36
+Ejemplos con las vistas
+03:48
+Navegación entre rutas
+04:08
+Parámetros en rutas
+04:37
+Parámetros opcionales en las rutas
+05:10
+Redirecciones
+05:25
