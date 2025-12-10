@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from miapp import views
+from layouts_app import views as layouts_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,5 +36,8 @@ urlpatterns = [
          views.producto_precio, name="producto_precio"),
     path("pagina/<int:redirigir>", views.pagina_redirigir, name="pagina_redirigir"),
     path("index/", views.index_principal, name="index_principal"),
-    path("adios-principal", views.adios_principal, name="adios_principal")
+    path("adios-principal/", views.adios_principal, name="adios_principal"),
+
+    path("layout_index/", layouts_views.layout_index, name="layout_index"),
+    path("layout_productos/", layouts_views.layout_productos, name="layout_productos"),
 ]
