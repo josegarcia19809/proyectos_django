@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-
-layout="""
+layout = """
     <h1>Sitio web con Django | José L. García</h1>
     <hr/>
     <ul>
@@ -19,18 +18,19 @@ layout="""
     </ul>
 """
 
+
 # Create your views here.
 def hola_mundo(request):
     return HttpResponse("""
     <h1>Hola mundo con Django!!!</h1>
     <h3>Bienvenido José García</h3>
-    """+layout)
+    """ + layout)
 
 
 def adios_mundo(request):
     return HttpResponse("""
     <h1>Adios mundo 😍</h1>
-    """+layout)
+    """ + layout)
 
 
 def index(request):
@@ -41,10 +41,10 @@ def index(request):
     """
     year = 2025
     while year <= 2050:
-        if year %2 ==0:
+        if year % 2 == 0:
             html += f"<li>{year}</li>"
         year = year + 1
-    html += """</ul>"""+layout
+    html += """</ul>""" + layout
 
     return HttpResponse(html)
 
@@ -52,9 +52,19 @@ def index(request):
 def contacto(request, nombre):
     return HttpResponse(f"""
     <h1>Contacto 📞 {nombre}</h1>
-    """+layout)
+    """ + layout)
+
 
 def calificacion_asignatura(request, asignatura, calificacion):
     return HttpResponse(f"""
     <h1>Calificación de la asignatura {asignatura}: {calificacion}</h1>
-    """+layout)
+    """ + layout)
+
+
+def producto_precio(request, producto="", precio=""):
+    html = ""
+    if producto and precio:
+        html = f"<h1>Precio del producto {producto}: ${precio}</h1>"
+    else:
+        html = "<p> No se han definido nombre del producto o su precio</p>"
+    return HttpResponse(html + layout)

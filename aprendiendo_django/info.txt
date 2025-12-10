@@ -1,8 +1,8 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Routing y vistas en Django: Parámetros en rutas
+Routing y vistas en Django: Parámetros opcionales en las rutas
 
-Parámetros opcionales en las rutas
+
 05:10
 Redirecciones
 05:25
