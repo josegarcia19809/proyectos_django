@@ -1,8 +1,8 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Plantillas y templates en Django: Layout, bloques y herencia de plantillas
+Plantillas y templates en Django: Herencia en bloques y añadir contenido
 
-Herencia en bloques y añadir contenido
+
 02:39
 Vincular hojas de estilos CSS en Django
 05:44
