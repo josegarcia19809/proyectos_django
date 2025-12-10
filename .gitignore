@@ -24,7 +24,6 @@ db.sqlite3-journal
 
 # Archivos estáticos generados
 staticfiles/
-static/
 media/
 
 # Archivos de cache
