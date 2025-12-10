@@ -2,18 +2,35 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
+layout="""
+    <h1>Sitio web con Django | José L. García</h1>
+    <hr/>
+    <ul>
+        <li>
+            <a href="/inicio">Inicio</a>
+        </li>
+        <li>
+            <a href="/hola-mundo">Hola Mundo</a>
+        </li>
+        <li>
+            <a href="/adios-mundo">Adios Mundo</a>
+        </li>
+
+    </ul>
+"""
+
 # Create your views here.
 def hola_mundo(request):
     return HttpResponse("""
     <h1>Hola mundo con Django!!!</h1>
     <h3>Bienvenido José García</h3>
-    """)
+    """+layout)
 
 
 def adios_mundo(request):
     return HttpResponse("""
     <h1>Adios mundo 😍</h1>
-    """)
+    """+layout)
 
 
 def index(request):
@@ -27,6 +44,6 @@ def index(request):
         if year %2 ==0:
             html += f"<li>{year}</li>"
         year = year + 1
-    html += """</ul>"""
+    html += """</ul>"""+layout
 
     return HttpResponse(html)
