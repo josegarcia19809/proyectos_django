@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 layout = """
     <h1>Sitio web con Django | José L. García</h1>
@@ -68,3 +68,15 @@ def producto_precio(request, producto="", precio=""):
     else:
         html = "<p> No se han definido nombre del producto o su precio</p>"
     return HttpResponse(html + layout)
+
+
+def pagina_redirigir(request, redirigir=0):
+    if redirigir == 1:
+        return redirect("/inicio/")
+    elif redirigir == 2:
+        return redirect('calificacion_asignatura',
+                        asignatura="Sistemas Operativos II",
+                        calificacion="10.0")
+    return HttpResponse(f"""
+    <h1>Contacto 📞</h1>
+    """ + layout)
