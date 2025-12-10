@@ -23,5 +23,8 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("inicio/", views.index, name="inicio"),
     path("hola-mundo/", views.hola_mundo, name="hola_mundo"),
-    path("adios-mundo/", views.adios_mundo, name="adios_mundo")
+    path("adios-mundo/", views.adios_mundo, name="adios_mundo"),
+    path("contacto/<str:nombre>", views.contacto, name="contacto"),
+    path("calificacion/<str:asignatura>/<str:calificacion>", views.calificacion_asignatura,
+         name="calificacion_asignatura")
 ]

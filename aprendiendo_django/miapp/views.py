@@ -47,3 +47,14 @@ def index(request):
     html += """</ul>"""+layout
 
     return HttpResponse(html)
+
+
+def contacto(request, nombre):
+    return HttpResponse(f"""
+    <h1>Contacto 📞 {nombre}</h1>
+    """+layout)
+
+def calificacion_asignatura(request, asignatura, calificacion):
+    return HttpResponse(f"""
+    <h1>Calificación de la asignatura {asignatura}: {calificacion}</h1>
+    """+layout)
