@@ -33,5 +33,7 @@ urlpatterns = [
          views.producto_precio, name="producto_precio"),
     path("precios/<str:producto>/<str:precio>",
          views.producto_precio, name="producto_precio"),
-    path("pagina/<int:redirigir>", views.pagina_redirigir, name="pagina_redirigir")
+    path("pagina/<int:redirigir>", views.pagina_redirigir, name="pagina_redirigir"),
+    path("index/", views.index_principal, name="index_principal"),
+    path("adios-principal", views.adios_principal, name="adios_principal")
 ]

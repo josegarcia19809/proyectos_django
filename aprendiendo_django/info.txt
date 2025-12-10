@@ -1,3 +1,12 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Routing y vistas en Django: Redirecciones
+Plantillas y templates en Django: Templates separadas
+4 clases • 28 min
+Templates separadas
+08:44
+Layout, bloques y herencia de plantillas
+10:25
+Herencia en bloques y añadir contenido
+02:39
+Vincular hojas de estilos CSS en Django
+05:44

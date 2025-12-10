@@ -80,3 +80,9 @@ def pagina_redirigir(request, redirigir=0):
     return HttpResponse(f"""
     <h1>Contacto 📞</h1>
     """ + layout)
+
+def index_principal(request):
+    return render(request, "index.html")
+
+def adios_principal(request):
+    return render(request, "adios.html")
