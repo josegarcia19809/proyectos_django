@@ -12,21 +12,26 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<h1>Sitio web con Django | José L. García</h1>
-<hr/>
-<ul>
-    <li>
-        <a href="/inicio">Inicio</a>
-    </li>
-    <li>
-        <a href="/hola-mundo">Hola Mundo</a>
-    </li>
-    <li>
-        <a href="/adios-mundo">Adios Mundo</a>
-    </li>
+<header>
+    <div id="logotipo">
+        <img src="{% static 'images/logo.png' %}" alt=""/>
+        <h1>Sitio web con Django | José L. García</h1>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="/inicio">Inicio</a>
+        </li>
+        <li>
+            <a href="/hola-mundo">Hola Mundo</a>
+        </li>
+        <li>
+            <a href="/adios-mundo">Adios Mundo</a>
+        </li>
 
-</ul>
-
+    </ul>
+</nav>
 <div id="content">
 
     {% block content %}

@@ -1,4 +1,20 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Plantillas y templates en Django: Vincular hojas de estilos CSS en Django
+Plantillas y templates en Django: Estructura HTML5 mejorada e imágenes
 
+
+02:37
+Logotipo que usaremos
+00:06
+Estilos de la cabecera
+04:17
+Cargar imagen en template de Django
+05:46
+Menú de navegación
+07:07
+Efecto 3D en la barra de navegación con CSS3
+08:09
+Estilos para el contenido central
+06:53
+Dando forma al pie de página (footer)
+02:20
