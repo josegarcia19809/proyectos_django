@@ -27,6 +27,26 @@
     <ul>
         {% for producto in productos %}
             <li>{{ producto }}</li>
+        {% empty %}
+            <p>No hay productos que mostrar</p>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h3>Lista de productos</h3>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ forloop.counter }} - {{ producto }} </li>
+        {% empty %}
+            <p>No hay productos que mostrar</p>
+        {% endfor %}
+    </ul>
+    <hr>
+    <h3>Lista de productos</h3>
+    <ul>
+        {% for producto in productos %}
+            <li>{{ producto }} - {{ forloop.first }}</li>
+        {% empty %}
+            <p>No hay productos que mostrar</p>
         {% endfor %}
     </ul>
 {% endblock %}

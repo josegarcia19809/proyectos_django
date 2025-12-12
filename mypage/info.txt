@@ -1,6 +1,6 @@
-Lenguaje de plantillas Django: Bucles - For template django
+Lenguaje de plantillas Django: Funcionalidades extra del bucle for en plantillas
 
-Funcionalidades extra del bucle for en plantillas
+
 04:04
 Ejercicio con las template tags
 05:27

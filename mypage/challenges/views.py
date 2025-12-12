@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def index(request):
     cantidad = 10
-    productos = ["TV", "Monitor", "Tablet"]
+    productos =  ["TV", "Monitor", "Tablet"]
     return render(request, "index.html", {
         'titulo': 'Tienda de productos',
         'subtitulo': 'Compra de verano',
