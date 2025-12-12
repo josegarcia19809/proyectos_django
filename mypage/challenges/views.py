@@ -5,14 +5,16 @@ from django.shortcuts import render
 
 def index(request):
     cantidad = 10
-    productos = ["TV", "Monitor", "Tablet"]
+    lista_productos = ["TV", "Monitor", "Tablet"]
     years = range(2025, 2051)
+    nombre = "José García"
     return render(request, "index.html", {
         'titulo': 'Tienda de productos',
         'subtitulo': 'Compra de verano',
         'cantidad': cantidad,
-        'productos': productos,
-        'years': years
+        'lista_productos': lista_productos,
+        'years': years,
+        'nombre': nombre
     })
 
 

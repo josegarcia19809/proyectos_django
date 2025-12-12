@@ -1,6 +1,6 @@
-Lenguaje de plantillas Django: Mostrando valores pares de un rango
+Lenguaje de plantillas Django: Includes templates django
 
-Includes templates django
+
 04:57
 Urls en templates
 03:46

@@ -25,7 +25,7 @@
     {# Uso de ciclos for #}
     <h3>Lista de productos</h3>
     <ul>
-        {% for producto in productos %}
+        {% for producto in lista_productos %}
             <li>{{ producto }}</li>
         {% empty %}
             <p>No hay productos que mostrar</p>
@@ -34,7 +34,7 @@
     <hr>
     <h3>Lista de productos</h3>
     <ul>
-        {% for producto in productos %}
+        {% for producto in lista_productos %}
             <li>{{ forloop.counter }} - {{ producto }} </li>
         {% empty %}
             <p>No hay productos que mostrar</p>
@@ -43,19 +43,12 @@
     <hr>
     <h3>Lista de productos</h3>
     <ul>
-        {% for producto in productos %}
+        {% for producto in lista_productos %}
             <li>{{ producto }} - {{ forloop.first }}</li>
         {% empty %}
             <p>No hay productos que mostrar</p>
         {% endfor %}
     </ul>
-    <hr>
-    <h4>Años pares hasta el 2050</h4>
-    <ul>
-        {% for year in years %}
-            {% if year|divisibleby:2 %}
-                <li>{{ year }}</li>
-            {% endif %}
-        {% endfor %}
-    </ul>
+
+    {% include 'fecha_actual.html' with saludo="Hola al 2026 " %}
 {% endblock %}
