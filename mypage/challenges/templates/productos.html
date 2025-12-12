@@ -1,0 +1,125 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Página de productos
+{% endblock %}
+
+{% block content %}
+   {{ block.super }}
+    <h1>Catálogo - 10 Productos</h1>
+
+    <ul class="product-list">
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/laptop14.jpg' %}" alt="Laptop 14''">
+            </div>
+            <div class="info">
+                <p class="name">Laptop Ultraligera 14"</p>
+                <p class="desc">Procesador i5, 16GB RAM, 512GB SSD — ideal para trabajo y estudio.</p>
+                <div class="meta"><span class="price">$899.99</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/auriculares_bluetooth.jpg' %}" alt="Auriculares Bluetooth">
+            </div>
+            <div class="info">
+                <p class="name">Auriculares Bluetooth</p>
+                <p class="desc">Cancelación activa de ruido, 30h de batería y carga rápida.</p>
+                <div class="meta"><span class="price">$129.00</span><span class="badge">Oferta</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/smartphone6.7.jpg' %}" alt="Smartphone 6.7''">
+            </div>
+            <div class="info">
+                <p class="name">Smartphone 6.7"</p>
+                <p class="desc">Pantalla OLED, cámara triple 50MP, carga inalámbrica.</p>
+                <div class="meta"><span class="price">$699.50</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/tablet11.jpg' %}" alt="Tablet 11''">
+            </div>
+            <div class="info">
+                <p class="name">Tablet 11" para dibujo</p>
+                <p class="desc">Lápiz sensible a la presión, buena para ilustración y notas.</p>
+                <div class="meta"><span class="price">$349.00</span><span class="badge">Pocas unidades</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/teclado_mecanico.jpg' %}" alt="Teclado mecánico">
+            </div>
+            <div class="info">
+                <p class="name">Kit Mecánico de Teclado</p>
+                <p class="desc">Keycaps PBT, interruptores táctiles y placa de aluminio.</p>
+                <div class="meta"><span class="price">$159.99</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/monitor27.jpg' %}" alt="Monitor 27''">
+            </div>
+            <div class="info">
+                <p class="name">Monitor 27" 144Hz</p>
+                <p class="desc">IPS, 144Hz, 1ms MPRT — para gaming y trabajo creativo.</p>
+                <div class="meta"><span class="price">$279.00</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/camara_compacta.jpg' %}" alt="Cámara compacta">
+            </div>
+            <div class="info">
+                <p class="name">Cámara Compacta 4K</p>
+                <p class="desc">Vídeo 4K, estabilización y entrada de micrófono externo.</p>
+                <div class="meta"><span class="price">$549.00</span><span class="badge">Oferta</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/proyector.jpg' %}" alt="Proyector LED">
+            </div>
+            <div class="info">
+                <p class="name">Proyector LED portátil</p>
+                <p class="desc">Portátil, fácil de conectar por HDMI y batería integrada.</p>
+                <div class="meta"><span class="price">$199.00</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/smartwatch_deportivo.jpg' %}" alt="Smartwatch deportivo">
+            </div>
+            <div class="info">
+                <p class="name">Smartwatch Deportivo</p>
+                <p class="desc">GPS, monitor de sueño y resistencia al agua 5ATM.</p>
+                <div class="meta"><span class="price">$99.99</span><span class="badge">Pocas unidades</span></div>
+            </div>
+        </li>
+
+        <li class="card">
+            <div class="thumb">
+                <img src="{% static 'images/bocinabluetooth 360.jpg' %}" alt="Bocina 360°">
+            </div>
+            <div class="info">
+                <p class="name">Bocina Bluetooth 360°</p>
+                <p class="desc">Sonido envolvente, resistente al agua y hasta 20h de reproducción.</p>
+                <div class="meta"><span class="price">$79.00</span><span class="badge">En stock</span></div>
+            </div>
+        </li>
+
+    </ul>
+{% endblock %}

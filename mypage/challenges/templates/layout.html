@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+        | José L. García
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<header>
+    <div id="logotipo">
+        <img src="{% static 'images/logo.png' %}" alt=""/>
+        <h1>Sitio web con Django | José L. García</h1>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li>
+            <a href="/index">Inicio</a>
+        </li>
+        <li>
+            <a href="/productos">Productos</a>
+        </li>
+
+    </ul>
+</nav>
+<div id="content">
+
+    {% block content %}
+        <strong>Contenido original del layout</strong>
+    {% endblock %}
+</div>
+<footer>
+    Master en Django
+</footer>
+</body>
+</html>

@@ -1,9 +1,9 @@
-Lenguaje de plantillas Django: Starting a Development Server
+Lenguaje de plantillas Django: Comentarios en plantillas
 
 
 
 9 clases • 36 min
-Comentarios en plantillas
+
 04:57
 Pasar datos desde la vista y mostrarlos en la plantilla
 03:35
