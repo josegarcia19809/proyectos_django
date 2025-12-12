@@ -1,6 +1,6 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Plantillas y templates en Django: Agregar estilos a toda la plantilla
+Plantillas y templates en Django: Agregando imágenes al catálogo
 
 
 02:37
