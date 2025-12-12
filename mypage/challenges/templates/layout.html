@@ -21,10 +21,14 @@
 <nav>
     <ul>
         <li>
-            <a href="/index">Inicio</a>
+            <a href="{% url 'index' %}">Inicio</a>
         </li>
         <li>
-            <a href="/productos">Productos</a>
+            <a href="{% url 'productos' %}">Productos</a>
+        </li>
+
+        <li>
+            <a href="{% url 'producto_precio' 'Gansito' '12.00' %}">Producto precio</a>
         </li>
 
     </ul>

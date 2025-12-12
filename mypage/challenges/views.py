@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -20,3 +21,11 @@ def index(request):
 
 def productos(request):
     return render(request, "productos.html")
+
+def producto_precio(request, producto="", precio=""):
+    html = ""
+    if producto and precio:
+        html = f"<h1>Precio del producto {producto}: ${precio}</h1>"
+    else:
+        html = "<p> No se han definido nombre del producto o su precio</p>"
+    return HttpResponse(html)
