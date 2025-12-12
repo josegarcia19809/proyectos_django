@@ -1,12 +1,5 @@
-Lenguaje de plantillas Django: Estilos dark
+Lenguaje de plantillas Django: Pasar datos desde la vista y mostrarlos en la plantilla
 
-
-
-9 clases • 36 min
-
-04:57
-Pasar datos desde la vista y mostrarlos en la plantilla
-03:35
 Condicionales - If templates django
 03:42
 Bucles - For template django
