@@ -92,3 +92,111 @@
             color: var(--muted);
             font-size: 13px
         }
+
+        /* ---------------------- */
+/* ENCABEZADO (HEADER) */
+/* ---------------------- */
+header {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 17, 32, 0.06);
+    margin-bottom: 20px;
+}
+
+#logotipo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+#logotipo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+#logotipo h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #0b1220;
+}
+
+/* ---------------------- */
+/* NAVEGACIÓN */
+/* ---------------------- */
+nav {
+    background: var(--card);
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 17, 32, 0.06);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+nav a:hover {
+    background: #e6f0ff;
+}
+
+/* ---------------------- */
+/* CONTENIDO PRINCIPAL */
+/* ---------------------- */
+#content {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 17, 32, 0.06);
+    margin-bottom: 20px;
+    min-height: 180px;
+    line-height: 1.6;
+}
+
+/* ---------------------- */
+/* TIPOGRAFÍA GENERAL */
+/* ---------------------- */
+p {
+    font-size: 15px;
+    color: #0b1220;
+}
+
+/* Enlaces dentro del contenido */
+#content a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#content a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------- */
+/* FOOTER */
+/* ---------------------- */
+footer {
+    text-align: center;
+    padding: 16px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(11, 17, 32, 0.06);
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 30px;
+}

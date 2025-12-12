@@ -1,6 +1,6 @@
 Master en Python: Aprender Python 3, Django, Flask y Tkinter
 
-Plantillas y templates en Django: Estructura HTML5 mejorada e imágenes
+Plantillas y templates en Django: Agregar estilos a toda la plantilla
 
 
 02:37
