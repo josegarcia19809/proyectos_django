@@ -1,9 +1,5 @@
-Lenguaje de plantillas Django: Funcionalidades extra del bucle for en plantillas
+Lenguaje de plantillas Django: Mostrando valores pares de un rango
 
-
-04:04
-Ejercicio con las template tags
-05:27
 Includes templates django
 04:57
 Urls en templates

@@ -49,4 +49,13 @@
             <p>No hay productos que mostrar</p>
         {% endfor %}
     </ul>
+    <hr>
+    <h4>Años pares hasta el 2050</h4>
+    <ul>
+        {% for year in years %}
+            {% if year|divisibleby:2 %}
+                <li>{{ year }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 {% endblock %}
