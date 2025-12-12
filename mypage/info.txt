@@ -1,0 +1,23 @@
+Lenguaje de plantillas Django: Starting a Development Server
+
+
+
+9 clases • 36 min
+Comentarios en plantillas
+04:57
+Pasar datos desde la vista y mostrarlos en la plantilla
+03:35
+Condicionales - If templates django
+03:42
+Bucles - For template django
+03:47
+Funcionalidades extra del bucle for en plantillas
+04:04
+Ejercicio con las template tags
+05:27
+Includes templates django
+04:57
+Urls en templates
+03:46
+Fechas
+01:37
