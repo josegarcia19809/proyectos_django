@@ -13,5 +13,12 @@
     {#    Otro comentario#}
     <h1>{{ titulo }}</h1>
     <h2>{{ subtitulo }}</h2>
+
+    {#    Uso de condicionales #}
+    {% if cantidad <= 10 %}
+        <p>Se está terminando el producto</p>
+    {% else %}
+        <p>Hay producto en existencia</p>
+    {% endif %}
     <p>Contenido cargado de un bloque</p>
 {% endblock %}

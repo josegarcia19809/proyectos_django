@@ -1,6 +1,6 @@
-Lenguaje de plantillas Django: Pasar datos desde la vista y mostrarlos en la plantilla
+Lenguaje de plantillas Django: Condicionales - If templates django
 
-Condicionales - If templates django
+
 03:42
 Bucles - For template django
 03:47
