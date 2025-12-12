@@ -1,9 +1,5 @@
-Lenguaje de plantillas Django: Condicionales - If templates django
+Lenguaje de plantillas Django: Bucles - For template django
 
-
-03:42
-Bucles - For template django
-03:47
 Funcionalidades extra del bucle for en plantillas
 04:04
 Ejercicio con las template tags
