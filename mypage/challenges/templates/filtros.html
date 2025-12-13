@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+
+{% block title %}
+    Página de pruebas
+{% endblock %}
+
+{% block content %}
+    <h1>Usando filtros</h1>
+    <p>{{ "Creado por José García"|cut:" " }}</p>
+    <p>{{ "Creado por José García"|upper }}</p>
+    <p>{{ "Creado por José García"|wordcount }}</p>
+    <p>{{ ""|default:"sin contenido" }}</p>
+    <p>{{ productos|first }}</p>
+    <p>{{ productos|join:", " }}</p>
+    <p>{{ productos|length }}</p>
+    <p>{{ productos|random }}</p>
+
+    <p>{{ "<b>Hola</b> <i>Mundo</i>"|striptags }}</p>
+{% endblock %}

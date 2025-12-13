@@ -22,6 +22,7 @@ def index(request):
 def productos(request):
     return render(request, "productos.html")
 
+
 def producto_precio(request, producto="", precio=""):
     html = ""
     if producto and precio:
@@ -29,3 +30,10 @@ def producto_precio(request, producto="", precio=""):
     else:
         html = "<p> No se han definido nombre del producto o su precio</p>"
     return HttpResponse(html)
+
+
+def filtros(request):
+    lista_productos = ["TV", "Radio"]
+    return render(request, "filtros.html", {
+        "productos": lista_productos
+    })

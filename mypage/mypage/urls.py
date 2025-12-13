@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("index/", views.index, name="index"),
     path("productos/", views.productos, name="productos"),
+    path("filtros/", views.filtros, name="filtros"),
     path("producto_precio/<str:producto>/<str:precio>/",
          views.producto_precio, name="producto_precio"),
 ]
