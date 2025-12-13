@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-
+{% load filters %}
 
 {% block title %}
     Página de pruebas
@@ -10,6 +10,7 @@
     <p>{{ "Creado por José García"|cut:" " }}</p>
     <p>{{ "Creado por José García"|upper }}</p>
     <p>{{ "Creado por José García"|wordcount }}</p>
+    <p>{{ "José"|saludo }}</p>
     <p>{{ ""|default:"sin contenido" }}</p>
     <p>{{ productos|first }}</p>
     <p>{{ productos|join:", " }}</p>

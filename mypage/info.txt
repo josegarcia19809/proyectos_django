@@ -1,6 +1,1 @@
-Filtros en las templates: Filtros por defecto
-2 clases • 14 min
-
-08:29
-Crear filtros personalizados
-05:59
+Filtros en las templates: Crear filtros personalizados
