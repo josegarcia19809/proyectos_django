@@ -1,1 +1,33 @@
-Filtros en las templates: Crear filtros personalizados
+Modelos y bases de datos en Django
+
+Crear modelos
+11:47
+Crear tablas basadas en modelos
+10:20
+Hacer cambios en la estructura de tablas y modelos
+04:43
+Guardar datos en la base de datos usando los modelos
+08:03
+Guardar registros usando parámetros de la url
+04:35
+Sacar datos y elementos de la base de datos
+05:41
+Actualizar registros
+04:51
+Listar todos los artículos
+05:42
+Limit y Order by
+03:01
+Borrar elementos
+07:25
+Consultas con condiciones, filter y lookups
+08:49
+Exclude
+03:45
+Ejecutar SQL desde Django
+03:22
+OR en consultas con el ORM
+02:50
+
+
+pylint-django: instalar?
