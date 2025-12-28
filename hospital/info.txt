@@ -1,1 +1,1 @@
-Django hospital: Uso de rutas con parámetros - tratamientos
+Django hospital: Uso de templates - pacientes

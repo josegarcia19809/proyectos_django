@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from doctores import views as doctores_views
 from tratamientos import views as tratam_views
+from pacientes import views as pacientes_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -61,4 +62,7 @@ urlpatterns = [
         tratam_views.servicio_especialidad,
         name="servicio_especialidad"
     ),
+
+    path("pacientes/", pacientes_views.index, name="pacientes_index"),
+    path("pacientes/info/", pacientes_views.informacion, name="pacientes_info"),
 ]
