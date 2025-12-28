@@ -1,1 +1,1 @@
-Django hospital: creación de rutas y vistas para doctores
+Django hospital: Uso de rutas con parámetros - tratamientos
