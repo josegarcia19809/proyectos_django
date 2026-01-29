@@ -1,0 +1,28 @@
+🔹 python manage.py makemigrations
+
+            👉 Crea las migraciones, pero no cambia la base de datos todavía.
+
+            Django revisa tus models.py
+
+            Detecta cambios (tablas nuevas, campos, relaciones, etc.)
+
+            Genera archivos de migración (como “instrucciones”)
+
+            📌 Es decir: le dices a Django qué cambios quieres aplicar.
+
+🔹 python manage.py migrate
+
+            👉 Aplica las migraciones a la base de datos.
+
+            Ejecuta esas “instrucciones”
+
+            Crea o modifica las tablas reales en la BD
+
+            Mantiene el historial de cambios
+
+            📌 Aquí Django sí modifica la base de datos.
+
+🧠 En una frase
+
+makemigrations = preparar cambios
+migrate = ejecutar cambios

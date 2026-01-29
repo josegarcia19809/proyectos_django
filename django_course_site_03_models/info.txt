@@ -1,13 +1,14 @@
 Python Django - The Practical Guide
 Maximilian Schwarzmüller
 
-Using Template Inheritance (Se crean plantillas para todo el sitio)
-Includes (Se crean módulos de páginas para su reutilización)
+Ver archivo crear_base_datos.txt
+
+Django Meetups: Getting Started with Models
 
 
 What is Data?
 3:43
-Getting Started with Models
+Getting Started with Models 2
 11:12
 Using the Admin Panel
 4:41
