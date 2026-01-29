@@ -3,15 +3,8 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Getting Started with Models
+Django Meetups: Using the Admin Panel
 
-
-What is Data?
-3:43
-Getting Started with Models 2
-11:12
-Using the Admin Panel
-4:41
 Querying Data
 7:51
 Adding Image Upload
