@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Meetups</title>
+    <link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="main-header">
+        <a id="main-logo" href="#">Meetups</a>
+        <h1>Próximos eventos</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <section>
+        <ol>
+            {% for meetup in meetups %}
+                <li class="meetup-item">
+
+                    <div class="meetup-summary">
+                        <!-- Imagen (opcional, placeholder) -->
+                        <div class="meetup-image">
+                            <img src="{% static 'meetups/images/default.png' %}"
+                                 alt="{{ meetup.title }}">
+                        </div>
+
+                        <!-- Detalles -->
+                        <div class="meetup-details">
+                            <h3>{{ meetup.title }}</h3>
+                            <address>{{ meetup.city }}</address>
+                            <p>Fecha: {{ meetup.date }}</p>
+                            <p>Asistentes: {{ meetup.attendees }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Acciones -->
+                    <div class="meetup-actions">
+                        <a href="{% url 'meetup-details' meetup.slug %}" class="btn">Ver
+                            detalles</a>
+                    </div>
+
+                </li>
+            {% empty %}
+                <p>No hay meetups disponibles.</p>
+            {% endfor %}
+        </ol>
+    </section>
+
+</body>
+</html>
