@@ -13,7 +13,7 @@
 
 {% block body %}
 
-
+{% if meetup_found %}
 <!-- Contenido principal -->
 <article>
 
@@ -63,5 +63,10 @@
     </section>
 
 </article>
+{% else %}
+<article>
+  <p>No meetup found for this slug, sorry!</p>
+</article>
+{% endif %}
 
 {% endblock %}

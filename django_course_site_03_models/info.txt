@@ -3,9 +3,9 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Using the Admin Panel
+Django Meetups: Querying Data
 
-Querying Data
+
 7:51
 Adding Image Upload
 11:38
