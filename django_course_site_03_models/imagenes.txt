@@ -1,0 +1,23 @@
+Se añade a settings
+
+MEDIA_ROOT = BASE_DIR / 'uploads'
+MEDIA_URL = '/files/'
+
+y se instala Pillow
+python -m pip install Pillow
+
+Se agrega a config/urls.py
+
+"""
+from django.contrib import admin
+from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns = [
+                  path('admin/', admin.site.urls),
+                  path('meetups/', include('meetups.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+"""
+
+Modificar los archivos html para que tomen esta configuración

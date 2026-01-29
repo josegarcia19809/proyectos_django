@@ -20,16 +20,16 @@
     <!-- Imagen principal -->
     <img
             id="main-image"
-            src="{% static 'meetups/images/default.png' %}"
-            alt="Imagen del meetup"
+            src="{{ meetup_slug.image.url }}"
+            alt="{{ meetup_slug.title }}"
     >
 
     <!-- Detalles -->
     <section id="details">
-        <h2>{{ meetup_slug }}</h2>
+        <h2>{{ meetup_slug.slug }}</h2>
 
         <address>
-            <span>Ciudad:</span> Ciudad de México
+            <span>Ciudad:</span> {{ meetup_slug.city }}
         </address>
 
         <p>

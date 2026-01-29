@@ -5,7 +5,7 @@
     <div class="meetup-summary">
         <!-- Imagen (opcional, placeholder) -->
         <div class="meetup-image">
-            <img src="{% static 'meetups/images/default.png' %}"
+            <img src="{{ meetup.image.url }}"
                  alt="{{ meetup.title }}">
         </div>
 

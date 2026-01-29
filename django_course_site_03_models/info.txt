@@ -7,9 +7,9 @@ Django Meetups: Querying Data
 
 
 7:51
-Adding Image Upload
+Adding Image Upload & Serving & Displaying Images
 11:38
-Serving & Displaying Images
+
 7:02
 Configuring the Admin Area
 8:26
