@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My meetups{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
+    {% block site_css %}{% endblock %}
+</head>
+<body>
+
+<!-- Header -->
+<header id="main-header">
+    <a id="main-logo" href="#">Meetups</a>
+    <h1>{% block main_heading %}My meetups{% endblock %}</h1>
+    {% block header_content %}My meetups content{% endblock %}
+</header>
+
+<!-- Contenido principal -->
+<main>
+{% block body %}My meetups{% endblock %}
+</main>
+
+</body>
+</html>

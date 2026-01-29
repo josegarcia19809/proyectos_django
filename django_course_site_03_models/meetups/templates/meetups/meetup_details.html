@@ -1,0 +1,67 @@
+{% extends 'meetups/base/base.html' %}
+{% load static %}
+
+{% block title %}Detalle del Meetup {% endblock %}
+
+{% block site_css %}
+<link rel="stylesheet" href="{% static 'meetups/styles/meetup-detail.css' %}">
+{% endblock %}
+
+{% block main_heading %} Detalle del evento {% endblock %}
+
+{% block header_content %} Find the one that best suits your needs! {% endblock %}
+
+{% block body %}
+
+
+<!-- Contenido principal -->
+<article>
+
+    <!-- Imagen principal -->
+    <img
+            id="main-image"
+            src="{% static 'meetups/images/default.png' %}"
+            alt="Imagen del meetup"
+    >
+
+    <!-- Detalles -->
+    <section id="details">
+        <h2>{{ meetup_slug }}</h2>
+
+        <address>
+            <span>Ciudad:</span> Ciudad de México
+        </address>
+
+        <p>
+            Este meetup está enfocado en compartir conocimiento y experiencias
+            sobre tecnología y desarrollo.
+        </p>
+
+        <footer>
+            <p>
+                ¿Quieres volver?
+                <a href="{% url 'all-meetups' %}">Ver todos los meetups</a>
+            </p>
+        </footer>
+    </section>
+
+    <!-- Registro (estructura lista para el futuro) -->
+    <section id="registration">
+        <h2>Registro</h2>
+        <form>
+            <ul>
+                <li>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email">
+                </li>
+            </ul>
+
+            <div id="registration-actions">
+                <button type="submit">Registrarse</button>
+            </div>
+        </form>
+    </section>
+
+</article>
+
+{% endblock %}
