@@ -1,0 +1,38 @@
+🔐 python manage.py createsuperuser
+
+        👉 Crea un superusuario que puede acceder al panel de administración de Django.
+
+        Cuando lo ejecutas:
+
+        Te pide nombre de usuario
+
+        Correo electrónico (opcional)
+
+        Contraseña
+
+        Después podrás entrar a:
+
+        http://localhost:8000/admin
+
+🧠 ¿Para qué sirve?
+
+Administrar usuarios y permisos
+
+Gestionar modelos (crear, editar, borrar registros)
+
+Probar rápidamente tu aplicación
+
+📌 Detalle importante
+
+Antes de usarlo:
+
+python manage.py migrate
+
+
+(la base de datos debe existir)
+
+🧩 En resumen
+
+createsuperuser = crear el admin principal del proyecto
+
+Si quieres, te explico qué diferencia hay entre un superusuario y un usuario normal o cómo registrar tus modelos en el admin 😉
