@@ -3,21 +3,13 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Creating a Modelform
+Django Meetups: Handling Form Submission
 
-
-8:21
-Handling Form Submission
-10:11
 More on Form Submission & Validation
-10:46
+
 From Modelform to Form
-9:17
+
 Polishing Organizer Email
-8:26
+
 Optimizing URLs
-3:59
-Wrap Up
-1:31
-Useful Resources & Links
-0:05
+

@@ -52,7 +52,8 @@
     <!-- Registro (estructura lista para el futuro) -->
     <section id="registration">
         <h2>Registro</h2>
-        <form>
+        <form action="{% url 'meetup_details' meetup_slug %}" method="post">
+            {% csrf_token %}
             <ul>
                 {{ form.as_ul }}
             </ul>
