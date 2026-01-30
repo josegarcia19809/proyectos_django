@@ -3,9 +3,9 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Handling Form Submission
+Django Meetups: More on Form Submission & Validation
 
-More on Form Submission & Validation
+
 
 From Modelform to Form
 
