@@ -45,7 +45,11 @@
             <p>
                 ¿Quieres volver?
                 <a href="{% url 'all-meetups' %}">Ver todos los meetups</a>
+
             </p>
+            <p>Need more details? Please
+            <a href="mailto:{{ meetup_slug.organizer_mail }}">contact us</a>.
+        </p>
         </footer>
     </section>
 

@@ -3,13 +3,8 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: From Modelform to Form
+Django Meetups: Polishing Organizer Email
 
-
-
-
-
-Polishing Organizer Email
 
 Optimizing URLs
 
