@@ -3,7 +3,7 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Optimizing URLs
+Django Meetups: Finalizando proyecto
 
 
 
