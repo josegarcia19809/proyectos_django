@@ -3,11 +3,11 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Setting one-to-many Relations
+Django Meetups: many-to-many Relations
 
 
 9:51
-many-to-many Relations
+
 9:45
 More Meetup Fields & Outputting Related Data
 7:38
