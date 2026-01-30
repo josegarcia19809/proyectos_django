@@ -3,8 +3,8 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Polishing Organizer Email
+Django Meetups: Optimizing URLs
 
 
-Optimizing URLs
+
 
