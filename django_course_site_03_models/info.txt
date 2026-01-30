@@ -3,7 +3,7 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: Querying Data
+Django Meetups: Configuring the Admin Area
 
 
 7:51
@@ -11,7 +11,7 @@ Adding Image Upload & Serving & Displaying Images
 11:38
 
 7:02
-Configuring the Admin Area
+
 8:26
 Setting one-to-many Relations
 9:51
