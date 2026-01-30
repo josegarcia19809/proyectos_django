@@ -3,9 +3,9 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: More Meetup Fields & Outputting Related Data
+Django Meetups: Creating a Modelform
 
-Creating a Modelform
+
 8:21
 Handling Form Submission
 10:11
