@@ -1,0 +1,21 @@
+{
+  "title": "Java Moderno: Buenas Prácticas y Programación Orientada a Objetos",
+  "slug": "java-moderno-buenas-practicas-poo",
+  "city": "Querétaro",
+  "date": "2026-06-15",
+  "attendees": 40,
+  "image": "images/java.png"
+}
+
+java@gmail.com
+
+
+{
+  "title": "JavaScript Moderno: ES6+, Frontend y Buenas Prácticas",
+  "slug": "javascript-moderno-es6-frontend",
+  "city": "Guadalajara",
+  "date": "2026-07-10",
+  "attendees": 55,
+  "image": "images/javascript.png",
+  "organizer_email": "organizador.js@meetups.dev"
+}

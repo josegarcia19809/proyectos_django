@@ -21,6 +21,7 @@ class Meetup(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(unique=True)
     city = models.CharField(max_length=100)
+    organizer_mail = models.EmailField()
     date = models.DateField()
     attendees = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='images')

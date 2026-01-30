@@ -26,9 +26,13 @@
 
     <!-- Detalles -->
     <section id="details">
-        <h2>{{ meetup_slug.slug }}</h2>
+        <h2>{{ meetup_slug.title }}</h2>
 
         <address>
+            <h2>Meeutup Location</h2>
+            <address>This meetup takes place in
+            <span>{{ meetup_slug.location.name }}</span> {{ meetup_slug.location.address }}
+            </address>
             <span>Ciudad:</span> {{ meetup_slug.city }}
         </address>
 

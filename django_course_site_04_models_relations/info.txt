@@ -3,14 +3,8 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: many-to-many Relations
+Django Meetups: More Meetup Fields & Outputting Related Data
 
-
-9:51
-
-9:45
-More Meetup Fields & Outputting Related Data
-7:38
 Creating a Modelform
 8:21
 Handling Form Submission
