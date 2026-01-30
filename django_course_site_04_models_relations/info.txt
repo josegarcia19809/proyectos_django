@@ -3,11 +3,11 @@ Maximilian Schwarzmüller
 
 Ver archivo crear_base_datos.txt
 
-Django Meetups: More on Form Submission & Validation
+Django Meetups: From Modelform to Form
 
 
 
-From Modelform to Form
+
 
 Polishing Organizer Email
 

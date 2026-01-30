@@ -10,6 +10,7 @@ class MeetupAdmin(admin.ModelAdmin):
     list_display = ("title", "date", "location")
     list_filter = ("location", "date")
     prepopulated_fields = {'slug': ('title',)}
+    readonly_fields = ("participants",)
 
 
 admin.site.register(Meetup, MeetupAdmin)

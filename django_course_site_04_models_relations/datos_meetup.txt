@@ -19,3 +19,14 @@ java@gmail.com
   "image": "images/javascript.png",
   "organizer_email": "organizador.js@meetups.dev"
 }
+
+
+{
+  "title": "Desarrollo de Apps iOS con Swift y SwiftUI",
+  "slug": "desarrollo-ios-swift-swiftui",
+  "city": "Monterrey",
+  "date": "2026-08-05",
+  "attendees": 35,
+  "image": "images/swift.png",
+  "organizer_email": "ios.swift@meetups.dev"
+}
