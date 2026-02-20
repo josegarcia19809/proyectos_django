@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cartelera</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/cartelera">Cartelera</a>
+        <a href="/horarios">Horarios</a>
+    </nav>
+</header>
+
+<h1>Cartelera 🎥</h1>
+
+<div class="contenedor">
+
+    <div class="card">
+        <img src="{% static 'img/avatar.jpg' %}" alt="Avatar">
+        <h3>Avatar</h3>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'img/lord.jpg' %}" alt="El Señor de los Anillos">
+        <h3>El Señor de los Anillos</h3>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'img/interstellar.jpg' %}" alt="Interestelar">
+        <h3>Interestelar</h3>
+    </div>
+
+</div>
+
+</body>
+</html>
