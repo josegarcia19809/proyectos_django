@@ -1,0 +1,26 @@
+django - monthly_challenges: Creating a New Project
+
+
+
+5:34
+What are URLs & Views?
+5:42
+Creating a First View & URL
+13:27
+Adding More Views & URLs
+3:11
+Dynamic Path Segments & Captured Values
+9:35
+Path Converters
+5:16
+Adding More Dynamic View Logic
+5:20
+Redirects
+8:48
+The Reverse Function & Named URLs
+10:31
+Returning HTML
+5:48
+Practicing URLs, Views & Dynamic View Logic
+9:37
+Summary
