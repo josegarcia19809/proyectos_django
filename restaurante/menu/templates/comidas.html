@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comidas</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'comidas' %}">Comidas</a>
+        <a href="{% url 'bebidas' %}">Bebidas</a>
+        <a href="{% url 'pedidos' %}">Pedidos</a>
+    </nav>
+</header>
+
+<h1>🍽️ Nuestro Menú</h1>
+
+<div class="contenedor">
+
+    <!-- Tarjeta 1 -->
+    <div class="card">
+        <img src="{% static 'img/chiles.jpg' %}" alt="Chiles Rellenos">
+        <h3>🌶️ Chiles Rellenos</h3>
+        <p>$120 MXN</p>
+        <a href="#" class="boton">Ordenar</a>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card">
+        <img src="{% static 'img/enchiladas.jpg' %}" alt="Enchiladas">
+        <h3>🫔 Enchiladas</h3>
+        <p>$95 MXN</p>
+        <a href="#" class="boton">Ordenar</a>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card">
+        <img src="{% static 'img/mole.jpg' %}" alt="Mole Poblano">
+        <h3>🍗 Mole Poblano</h3>
+        <p>$140 MXN</p>
+        <a href="#" class="boton">Ordenar</a>
+    </div>
+
+    <!-- Tarjeta 4 -->
+    <div class="card">
+        <img src="{% static 'img/tacos.jpg' %}" alt="Tacos">
+        <h3>🌮 Tacos</h3>
+        <p>$75 MXN</p>
+        <a href="#" class="boton">Ordenar</a>
+    </div>
+
+    <!-- Tarjeta 5 -->
+    <div class="card">
+        <img src="{% static 'img/tortas.jpg' %}" alt="Tortas">
+        <h3>🥪 Tortas</h3>
+        <p>$85 MXN</p>
+        <a href="#" class="boton">Ordenar</a>
+    </div>
+
+</div>
+
+</body>
+</html>

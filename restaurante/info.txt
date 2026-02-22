@@ -1,2 +1,2 @@
 
-Restaurante Web con Django: Estructura de carpetas
+Restaurante Web con Django: Templates HTML
