@@ -1,12 +1,5 @@
-django - monthly_challenges: Creating a New Project
+django - monthly_challenges: Creating a First View & URL
 
-
-
-5:34
-What are URLs & Views?
-5:42
-Creating a First View & URL
-13:27
 Adding More Views & URLs
 3:11
 Dynamic Path Segments & Captured Values
