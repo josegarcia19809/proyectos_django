@@ -4,6 +4,9 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import HttpResponse
 
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
+
 def monthly_challenge(request, month):
     challenge_text = None
 

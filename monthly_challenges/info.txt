@@ -1,9 +1,5 @@
-django - monthly_challenges: Dynamic Path Segments & Captured Values
+django - monthly_challenges: Adding More Dynamic View Logic
 
-Path Converters
-5:16
-Adding More Dynamic View Logic
-5:20
 Redirects
 8:48
 The Reverse Function & Named URLs
