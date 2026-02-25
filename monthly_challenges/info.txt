@@ -1,9 +1,5 @@
-django - monthly_challenges: Adding More Views & URLs
+django - monthly_challenges: Dynamic Path Segments & Captured Values
 
-
-3:11
-Dynamic Path Segments & Captured Values
-9:35
 Path Converters
 5:16
 Adding More Dynamic View Logic
