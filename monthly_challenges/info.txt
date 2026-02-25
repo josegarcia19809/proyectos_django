@@ -1,6 +1,6 @@
-django - monthly_challenges: Creating a First View & URL
+django - monthly_challenges: Adding More Views & URLs
 
-Adding More Views & URLs
+
 3:11
 Dynamic Path Segments & Captured Values
 9:35
