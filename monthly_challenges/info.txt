@@ -1,4 +1,4 @@
-django - monthly_challenges: Adding More Dynamic View Logic
+django - monthly_challenges: Adding More Dynamic View Logic 2
 
 Redirects
 8:48
