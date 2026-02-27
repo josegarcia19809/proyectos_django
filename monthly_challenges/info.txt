@@ -1,6 +1,6 @@
-django - monthly_challenges: Adding More Dynamic View Logic 2
+django - monthly_challenges: Redirects
 
-Redirects
+
 8:48
 The Reverse Function & Named URLs
 10:31
