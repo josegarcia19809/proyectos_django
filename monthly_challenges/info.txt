@@ -1,6 +1,6 @@
-django - monthly_challenges: The Reverse Function & Named URLs
+django - monthly_challenges: Returning HTML
 
-Returning HTML
+
 5:48
 Practicing URLs, Views & Dynamic View Logic
 9:37
