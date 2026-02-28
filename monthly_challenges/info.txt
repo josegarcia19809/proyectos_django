@@ -1,7 +1,1 @@
-django - monthly_challenges: Returning HTML
-
-
-5:48
-Practicing URLs, Views & Dynamic View Logic
-9:37
-Summary
+django - monthly_challenges: Practicing URLs, Views & Dynamic View Logic
