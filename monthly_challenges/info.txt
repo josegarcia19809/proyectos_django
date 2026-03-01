@@ -1,6 +1,6 @@
-django - monthly_challenges: Template Language & Variable Interpolation
+django - monthly_challenges: Filters
 
-Filters
+
 4:19
 The Django Visual Studio Code Extension
 2:29
