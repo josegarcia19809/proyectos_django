@@ -1,11 +1,5 @@
-django - monthly_challenges: Rendering Templates
+django - monthly_challenges: Template Language & Variable Interpolation
 
-
-4:16
-Template Language & Variable Interpolation
-5:38
-Exercise Solution
-1:56
 Filters
 4:19
 The Django Visual Studio Code Extension
