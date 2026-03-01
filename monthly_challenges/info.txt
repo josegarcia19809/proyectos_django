@@ -1,11 +1,5 @@
-django - monthly_challenges: Filters
+django - monthly_challenges: Tags & the "for" Tag
 
-
-4:19
-The Django Visual Studio Code Extension
-2:29
-Tags & the "for" Tag
-8:02
 The URL Tag for Dynamic URLs
 6:10
 The "if" Tag for Conditional Content
