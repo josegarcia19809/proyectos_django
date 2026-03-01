@@ -1,1 +1,40 @@
-django - monthly_challenges: Practicing URLs, Views & Dynamic View Logic
+django - monthly_challenges: Adding & Registering Templates
+
+Rendering Templates
+4:16
+Template Language & Variable Interpolation
+5:38
+Exercise Solution
+1:56
+Filters
+4:19
+The Django Visual Studio Code Extension
+2:29
+Tags & the "for" Tag
+8:02
+The URL Tag for Dynamic URLs
+6:10
+The "if" Tag for Conditional Content
+5:16
+Template Inheritance
+9:38
+Exercise Solution
+1:31
+Including Partial Template Snippets
+9:45
+More on the Django Template Language (DTL)
+0:42
+404 Templates
+7:08
+Adding Static Files
+9:13
+Adding Global Static Files
+6:24
+Adding CSS Styling
+15:55
+Building Static URLs Dynamically
+0:25
+Summary
+4:48
+Useful Resources & Links
+0:07
