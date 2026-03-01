@@ -1,7 +1,5 @@
-django - monthly_challenges: Tags & the "for" Tag
+django - monthly_challenges: The URL Tag for Dynamic URLs
 
-The URL Tag for Dynamic URLs
-6:10
 The "if" Tag for Conditional Content
 5:16
 Template Inheritance
@@ -22,7 +20,3 @@ Adding CSS Styling
 15:55
 Building Static URLs Dynamically
 0:25
-Summary
-4:48
-Useful Resources & Links
-0:07
