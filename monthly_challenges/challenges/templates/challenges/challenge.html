@@ -6,6 +6,10 @@
 </head>
 <body>
 <h1>Desafio del mes de {{ month | title }}</h1>
-<h2>{{ text }}</h2>
+{% if text is not None %}
+    <h2>{{ text }}</h2>
+{% else %}
+    <p>No hay un reto para este mes aún! 😰</p>
+{% endif %}
 </body>
 </html>

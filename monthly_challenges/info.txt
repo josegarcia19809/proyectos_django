@@ -1,7 +1,5 @@
-django - monthly_challenges: The URL Tag for Dynamic URLs
+django - monthly_challenges: The "if" Tag for Conditional Content
 
-The "if" Tag for Conditional Content
-5:16
 Template Inheritance
 9:38
 Exercise Solution

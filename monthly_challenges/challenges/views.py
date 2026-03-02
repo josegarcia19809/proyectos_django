@@ -14,7 +14,7 @@ monthly_challenges = {
     "september": "Septiembre: Practicar pruebas unitarias y buenas prácticas de código.",
     "october": "Octubre: Optimizar un proyecto anterior aplicando mejoras.",
     "november": "Noviembre: Documentar correctamente mis proyectos.",
-    "december": "Diciembre: Evaluar mis logros del año y planear nuevas metas."
+    "december": None
 }
 
 # Create your views here.
