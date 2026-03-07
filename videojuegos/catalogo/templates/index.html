@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/videojuego">Videojuego</a>
+    <a href="/catalogo">Catálogo</a>
+</nav>
+
+<h1>🎮 Catálogo de Videojuegos</h1>
+
+<div class="contenedor">
+
+    <div class="card">
+        <h3>🧠 Aprender Django</h3>
+        <p>Enviar datos desde las vistas a los templates.</p>
+    </div>
+
+    <div class="card">
+        <h3>🎮 Videojuegos</h3>
+        <p>Explora distintos títulos y plataformas.</p>
+    </div>
+
+    <div class="card">
+        <h3>📚 Proyecto educativo</h3>
+        <p>Ejemplo práctico para aprender desarrollo web.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

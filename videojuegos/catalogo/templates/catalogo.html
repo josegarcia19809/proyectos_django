@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catálogo de Videojuegos</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+
+<body>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/videojuego">Videojuego</a>
+    <a href="/catalogo">Catálogo</a>
+</nav>
+
+<h1>🎮 Catálogo de Videojuegos</h1>
+
+<div class="contenedor">
+
+    {% for juego in videojuegos %}
+
+        <div class="card">
+
+            <img src="{% static 'img/' %}{{ juego.imagen }}">
+
+            <div class="info">
+
+                <h3>{{ juego.titulo }}</h3>
+
+                <p>🎭 {{ juego.genero }}</p>
+                <p>💻 {{ juego.plataforma }}</p>
+                <p>📅 {{ juego.anio }}</p>
+
+                <a class="boton" href="/detalle/{{ juego.id }}">Ver detalle</a>
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
