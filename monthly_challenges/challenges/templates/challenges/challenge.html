@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Desafio del mes de {{ month }}</title>
-</head>
-<body>
-<h1>Desafio del mes de {{ month | title }}</h1>
-{% if text is not None %}
-    <h2>{{ text }}</h2>
-{% else %}
-    <p>No hay un reto para este mes aún! 😰</p>
-{% endif %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block page_title %}
+    Desafio del mes de {{ month }}
+{% endblock %}
+
+{% block content %}
+    <h1>Desafio del mes de {{ month | title }}</h1>
+    {% if text is not None %}
+        <h2>{{ text }}</h2>
+    {% else %}
+        <p>No hay un reto para este mes aún! 😰</p>
+    {% endif %}
+{% endblock %}

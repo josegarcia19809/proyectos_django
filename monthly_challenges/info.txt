@@ -1,6 +1,6 @@
-django - monthly_challenges: The "if" Tag for Conditional Content
+django - monthly_challenges: Template Inheritance
 
-Template Inheritance
+
 9:38
 Exercise Solution
 1:31
