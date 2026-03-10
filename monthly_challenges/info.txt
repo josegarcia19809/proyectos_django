@@ -1,11 +1,5 @@
-django - monthly_challenges: Template Inheritance
+django - monthly_challenges: Including Partial Template Snippets
 
-
-9:38
-Exercise Solution
-1:31
-Including Partial Template Snippets
-9:45
 More on the Django Template Language (DTL)
 0:42
 404 Templates
