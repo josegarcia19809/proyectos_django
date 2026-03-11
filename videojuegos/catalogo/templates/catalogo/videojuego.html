@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+    Videojuego
+{% endblock %}
+
+{% block contenido %}
+
+    <h1>🎮 Videojuego</h1>
+
+    <div class="contenedor-detalle">
+
+        <div class="card-neon-verde">
+
+            <img src="{% static 'img/' %}{{ imagen }}">
+
+            <div class="detalle-info">
+
+                <h2>{{ titulo }}</h2>
+
+                <p>🎭 {{ genero }}</p>
+                <p>💻 {{ plataforma }}</p>
+                <p>📅 {{ anio }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

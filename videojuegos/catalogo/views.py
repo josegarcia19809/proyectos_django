@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'catalogo/index.html')
 
 
 # MÓDULO 1
@@ -23,7 +23,7 @@ def videojuego(request):
         "imagen": imagen
     }
 
-    return render(request, 'videojuego.html', contexto)
+    return render(request, 'catalogo/videojuego.html', contexto)
 
 
 # MÓDULO 2 Y 3
@@ -35,7 +35,7 @@ from django.shortcuts import render
 def catalogo(request):
     videojuegos = obtener_videojuegos()
 
-    return render(request, "catalogo.html", {"videojuegos": videojuegos})
+    return render(request, "catalogo/catalogo.html", {"videojuegos": videojuegos})
 
 
 def detalle(request, id):
@@ -48,7 +48,7 @@ def detalle(request, id):
         if juego["id"] == id:
             juego_encontrado = juego
 
-    return render(request, "detalle.html", {"juego": juego_encontrado})
+    return render(request, "catalogo/detalle.html", {"juego": juego_encontrado})
 
 def obtener_videojuegos():
     return [

@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        {% block titulo %}
+            Catálogo de videojuegos
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+
+</head>
+
+<body>
+
+{% include "catalogo/includes/navbar.html" %}
+
+<div class="contenido">
+
+    {% block contenido %}
+
+    {% endblock %}
+
+</div>
+
+</body>
+</html>

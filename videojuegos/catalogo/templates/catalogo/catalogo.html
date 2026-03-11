@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+    Catálogo
+{% endblock %}
+
+{% block contenido %}
+
+    <h1>🎮 Catálogo de Videojuegos</h1>
+
+    <div class="contenedor">
+
+        {% for juego in videojuegos %}
+
+            <div class="card">
+
+                <img src="{% static 'img/' %}{{ juego.imagen }}">
+
+                <div class="info">
+
+                    <h3>{{ juego.titulo }}</h3>
+
+                    <p>🎭 {{ juego.genero }}</p>
+                    <p>💻 {{ juego.plataforma }}</p>
+                    <p>📅 {{ juego.anio }}</p>
+
+                    <a class="boton" href="{% url 'detalle' juego.id %}">Ver detalle</a>
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

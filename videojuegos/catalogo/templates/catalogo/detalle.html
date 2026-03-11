@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+    {{ juego.titulo }}
+{% endblock %}
+
+{% block contenido %}
+
+    <h1>🎮 {{ juego.titulo }}</h1>
+
+    <div class="contenedor-detalle">
+
+        <div class="detalle">
+
+            <img src="{% static 'img/' %}{{ juego.imagen }}">
+
+            <div class="detalle-info">
+
+                <h2>{{ juego.titulo }}</h2>
+
+                <p><b>🎭 Género:</b> {{ juego.genero }}</p>
+                <p><b>💻 Plataforma:</b> {{ juego.plataforma }}</p>
+                <p><b>📅 Año:</b> {{ juego.anio }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}
