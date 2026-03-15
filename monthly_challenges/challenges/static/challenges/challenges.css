@@ -1,0 +1,41 @@
+/* Contenedor general */
+body {
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lista de meses */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 40px auto;
+    max-width: 500px;
+}
+
+/* Cada elemento */
+li {
+    margin: 12px 0;
+}
+
+/* Enlaces */
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 14px;
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+li a:hover {
+    background-color: #4f46e5;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

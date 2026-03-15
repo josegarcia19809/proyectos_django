@@ -1,6 +1,1 @@
-django - monthly_challenges: Adding Global Static Files
-
-Adding CSS Styling
-15:55
-Building Static URLs Dynamically
-0:25
+django - monthly_challenges: Adding CSS Styling
