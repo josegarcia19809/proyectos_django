@@ -1,9 +1,5 @@
-django - monthly_challenges: Including Partial Template Snippets
+django - monthly_challenges: 404 Templates
 
-More on the Django Template Language (DTL)
-0:42
-404 Templates
-7:08
 Adding Static Files
 9:13
 Adding Global Static Files
