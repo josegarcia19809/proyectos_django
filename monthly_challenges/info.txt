@@ -1,1 +1,1 @@
-django - monthly_challenges: Adding CSS Styling
+django - monthly_challenges: Finalizando proyecto
