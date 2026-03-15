@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-%v&wv8kjf*5t3r5zz)i3-lz1y%7-(r=qy)oe@(9et339f_9e8g
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # Para que pueda mostrar la página de 404 debe estar en False y agregar ALLOWED_HOSTS
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 

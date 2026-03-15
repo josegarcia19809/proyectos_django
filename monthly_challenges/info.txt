@@ -1,6 +1,6 @@
-django - monthly_challenges: 404 Templates
+django - monthly_challenges: Adding Static Files
 
-Adding Static Files
+
 9:13
 Adding Global Static Files
 6:24
