@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 
 
@@ -29,9 +30,6 @@ def videojuego(request):
 # MÓDULO 2 Y 3
 # Diccionario y arreglo de diccionarios
 
-from django.shortcuts import render
-
-
 def catalogo(request):
     videojuegos = obtener_videojuegos()
 
@@ -39,16 +37,14 @@ def catalogo(request):
 
 
 def detalle(request, id):
-    videojuegos = obtener_videojuegos()
+    try:
+        videojuegos = obtener_videojuegos()
+        juego_encontrado = videojuegos[id - 1]
 
-    juego_encontrado = None
+        return render(request, "catalogo/detalle.html", {"juego": juego_encontrado})
+    except:
+        raise Http404
 
-    for juego in videojuegos:
-
-        if juego["id"] == id:
-            juego_encontrado = juego
-
-    return render(request, "catalogo/detalle.html", {"juego": juego_encontrado})
 
 def obtener_videojuegos():
     return [

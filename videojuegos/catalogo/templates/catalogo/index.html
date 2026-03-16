@@ -1,9 +1,12 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block titulo %}
     Inicio
 {% endblock %}
 
+{% block archivos_css %}
+    <link rel="stylesheet" href="{% static 'catalogo/css/estilos.css' %}">
+{% endblock %}
 {% block contenido %}
 
     <h1>🎮 Catálogo de Videojuegos</h1>
