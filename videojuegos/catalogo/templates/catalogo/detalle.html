@@ -5,6 +5,10 @@
     {{ juego.titulo }}
 {% endblock %}
 
+{% block archivos_css %}
+    <link rel="stylesheet" href="{% static 'catalogo/css/estilos.css' %}">
+{% endblock %}
+
 {% block contenido %}
 
     <h1>🎮 {{ juego.titulo }}</h1>

@@ -1,154 +1,153 @@
 /* ====== ESTILO GENERAL ====== */
-
+/* listo*/
 
 body {
     margin: 0;
-    /*font-family: 'Segoe UI', sans-serif;*/
-    background: linear-gradient(135deg,#0f172a,#1e293b);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
 }
 
 /* ====== NAVBAR ====== */
 
 nav {
-    background:#020617;
-    padding:15px;
-    text-align:center;
+    background: #020617;
+    padding: 15px;
+    text-align: center;
 }
 
-nav a{
-    color:white;
-    margin:0 20px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-nav a:hover{
-    color:#38bdf8;
+nav a:hover {
+    color: #38bdf8;
 }
 
 /* ====== TITULOS ====== */
 
-h1{
-    text-align:center;
-    margin-top:30px;
+h1 {
+    text-align: center;
+    margin-top: 30px;
 }
 
 /* ====== GRID DEL CATALOGO ====== */
 
-.contenedor{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:30px;
-    padding:40px;
+.contenedor {
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+    padding: 40px;
 }
 
 /* ====== TARJETAS ====== */
 
-.card{
+.card {
 
-    background:#020617;
-    border-radius:18px;
+    background: #020617;
+    border-radius: 18px;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
-    transition:transform 0.35s ease,
-               box-shadow 0.35s ease;
+    transition: transform 0.35s ease,
+    box-shadow 0.35s ease;
 
-    animation:aparecer 0.6s ease;
+    animation: aparecer 0.6s ease;
 
 }
 
 /* EFECTO HOVER */
 
-.card:hover{
+.card:hover {
 
-    transform:translateY(-10px) scale(1.04);
+    transform: translateY(-10px) scale(1.04);
 
-    box-shadow:0 20px 40px rgba(56,189,248,0.5);
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.5);
 
 }
 
 /* ====== IMAGEN ====== */
 
-.card img{
+.card img {
 
-    width:100%;
-    height:300px;
+    width: 100%;
+    height: 300px;
 
-    object-fit:cover;
+    object-fit: cover;
 
 }
 
 /* ====== INFO ====== */
 
-.info{
-    padding:15px;
+.info {
+    padding: 15px;
 }
 
-.info h3{
-    margin-top:0;
+.info h3 {
+    margin-top: 0;
 }
 
-.info p{
-    margin:6px 0;
-    color:#cbd5f5;
+.info p {
+    margin: 6px 0;
+    color: #cbd5f5;
 }
 
 /* ====== BOTON ====== */
 
-.boton{
+.boton {
 
-display:inline-block;
+    display: inline-block;
 
-margin-top:10px;
+    margin-top: 10px;
 
-padding:8px 14px;
+    padding: 8px 14px;
 
-background:#38bdf8;
+    background: #38bdf8;
 
-color:white;
+    color: white;
 
-text-decoration:none;
+    text-decoration: none;
 
-border-radius:10px;
+    border-radius: 10px;
 
-font-weight:bold;
+    font-weight: bold;
 
-transition:0.3s;
+    transition: 0.3s;
 
 }
 
 /* EFECTO BOTON */
 
-.boton:hover{
+.boton:hover {
 
-background:#0ea5e9;
+    background: #0ea5e9;
 
-transform:scale(1.07);
+    transform: scale(1.07);
 
 }
 
 /* ====== ANIMACION DE APARICION ====== */
 
-@keyframes aparecer{
+@keyframes aparecer {
 
-from{
+    from {
 
-opacity:0;
-transform:translateY(30px);
+        opacity: 0;
+        transform: translateY(30px);
 
-}
+    }
 
-to{
+    to {
 
-opacity:1;
-transform:translateY(0);
+        opacity: 1;
+        transform: translateY(0);
 
-}
+    }
 
 }
 
@@ -170,11 +169,11 @@ transform:translateY(0);
     overflow: hidden;
     position: relative;
 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
     transition: transform 0.35s ease,
-                box-shadow 0.35s ease,
-                border 0.35s ease;
+    box-shadow 0.35s ease,
+    border 0.35s ease;
 
     border: 2px solid transparent;
 }
@@ -187,11 +186,10 @@ transform:translateY(0);
 
     border: 2px solid #00ffff;
 
-    box-shadow:
-        0 0 10px #00ffff,
-        0 0 20px #00ffff,
-        0 0 40px #00ffff,
-        0 0 80px rgba(0,255,255,0.6);
+    box-shadow: 0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff,
+    0 0 80px rgba(0, 255, 255, 0.6);
 }
 
 /* ====== IMAGEN ====== */
@@ -219,106 +217,104 @@ transform:translateY(0);
 
 /* ====== TARJETA NEON VERDE ====== */
 
-.card-neon-verde{
+.card-neon-verde {
 
-width:420px;
+    width: 420px;
 
-background:#020617;
+    background: #020617;
 
-border-radius:20px;
+    border-radius: 20px;
 
-overflow:hidden;
+    overflow: hidden;
 
-border:2px solid transparent;
+    border: 2px solid transparent;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
-transition:transform 0.35s,
-           box-shadow 0.35s,
-           border 0.35s;
+    transition: transform 0.35s,
+    box-shadow 0.35s,
+    border 0.35s;
 
 }
 
 /* EFECTO NEON VERDE */
 
-.card-neon-verde:hover{
+.card-neon-verde:hover {
 
-transform:translateY(-8px) scale(1.03);
+    transform: translateY(-8px) scale(1.03);
 
-border:2px solid #00ff9c;
+    border: 2px solid #00ff9c;
 
-box-shadow:
-
-0 0 10px #00ff9c,
-0 0 20px #00ff9c,
-0 0 40px #00ff9c,
-0 0 80px rgba(0,255,156,0.6);
+    box-shadow: 0 0 10px #00ff9c,
+    0 0 20px #00ff9c,
+    0 0 40px #00ff9c,
+    0 0 80px rgba(0, 255, 156, 0.6);
 
 }
 
 /* IMAGEN */
 
-.card-neon-verde img{
+.card-neon-verde img {
 
-width:100%;
+    width: 100%;
 
-height:420px;
+    height: 420px;
 
-object-fit:cover;
+    object-fit: cover;
 
 }
 
 /* ====== FONDO LANDSCAPE PARA INDEX ====== */
 
-.fondo-index{
+.fondo-index {
 
-background-image: url("../img/background.jpg");
+    background-image: url("../img/background.jpg");
 
-background-size: cover;
+    background-size: cover;
 
-background-position: center;
+    background-position: center;
 
-background-attachment: fixed;
+    background-attachment: fixed;
 
-min-height: 100vh;
+    min-height: 100vh;
 
 }
 
 /* CAPA OSCURA PARA LEER TEXTO */
 
-.overlay{
+.overlay {
 
-background: rgba(0,0,0,0.65);
+    background: rgba(0, 0, 0, 0.65);
 
-min-height: 100vh;
+    min-height: 100vh;
 
-padding-bottom: 40px;
+    padding-bottom: 40px;
 
 }
 
 /* TARJETAS DEL INDEX */
 
-.card{
+.card {
 
-background: rgba(2,6,23,0.85);
+    background: rgba(2, 6, 23, 0.85);
 
-border-radius: 18px;
+    border-radius: 18px;
 
-padding: 20px;
+    padding: 20px;
 
-text-align: center;
+    text-align: center;
 
-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
 
-transition: transform 0.3s,
-            box-shadow 0.3s;
+    transition: transform 0.3s,
+    box-shadow 0.3s;
 
 }
 
-.card:hover{
+.card:hover {
 
-transform: translateY(-6px);
+    transform: translateY(-6px);
 
-box-shadow: 0 10px 25px rgba(0,255,200,0.5);
+    box-shadow: 0 10px 25px rgba(0, 255, 200, 0.5);
 
 }
