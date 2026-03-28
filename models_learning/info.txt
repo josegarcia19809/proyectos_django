@@ -1,11 +1,6 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Hacer cambios en la estructura de tablas y modelos
+Modelos y bases de datos en Django: Guardar datos en la base de datos usando los modelos
 
-
-
-4:43
-Guardar datos en la base de datos usando los modelos
-8:03
 Guardar registros usando parámetros de la url
 4:35
 Sacar datos y elementos de la base de datos
