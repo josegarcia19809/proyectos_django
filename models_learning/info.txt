@@ -1,8 +1,8 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Crear tablas basadas en modelos
+Modelos y bases de datos en Django: Hacer cambios en la estructura de tablas y modelos
 
 
-Hacer cambios en la estructura de tablas y modelos
+
 4:43
 Guardar datos en la base de datos usando los modelos
 8:03
