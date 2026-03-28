@@ -1,0 +1,28 @@
+Basado en Curso de Victor Robles
+Modelos y bases de datos en Django: Crear tablas basadas en modelos
+
+
+Hacer cambios en la estructura de tablas y modelos
+4:43
+Guardar datos en la base de datos usando los modelos
+8:03
+Guardar registros usando parámetros de la url
+4:35
+Sacar datos y elementos de la base de datos
+5:41
+Actualizar registros
+4:51
+Listar todos los artículos
+5:42
+Limit y Order by
+3:01
+Borrar elementos
+7:25
+Consultas con condiciones, filter y lookups
+8:49
+Exclude
+3:45
+Ejecutar SQL desde Django
+3:22
+OR en consultas con el ORM
+2:50
