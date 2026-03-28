@@ -13,4 +13,17 @@ def crear_articulo(request):
 
     )
     articulo.save()
-    return HttpResponse("Crear articulo")
+    return HttpResponse(
+        f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
+
+
+def crear_articulo2(request, title, content, public):
+    articulo = Article(
+        title=title,
+        content=content,
+        public=public,
+
+    )
+    articulo.save()
+    return HttpResponse(
+        f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
