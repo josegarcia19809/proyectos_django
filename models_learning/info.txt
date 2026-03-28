@@ -1,10 +1,6 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Guardar registros usando parámetros de la url
+Modelos y bases de datos en Django: Sacar datos y elementos de la base de datos
 
-
-4:35
-Sacar datos y elementos de la base de datos
-5:41
 Actualizar registros
 4:51
 Listar todos los artículos

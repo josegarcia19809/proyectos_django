@@ -27,3 +27,12 @@ def crear_articulo2(request, title, content, public):
     articulo.save()
     return HttpResponse(
         f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
+
+
+def ver_articulo(request):
+    try:
+        articulo = Article.objects.get(title='Coca Cola')
+        response = f"articulo {articulo.title}, contenido: {articulo.content}"
+    except:
+        response = "<h1>Articulo no existe</h1>"
+    return HttpResponse(response)
