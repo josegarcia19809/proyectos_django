@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de artículos</title>
+</head>
+<body>
+<h1>Lista de artículos</h1>
+
+<ul>
+    {% for articulo in articulos %}
+        <li>
+            <h3>🆔 {{ articulo.id }} | 🛒 {{ articulo.nombre }}</h3>
+
+            <p>📝 <strong>Descripción:</strong> {{ articulo.descripcion }}</p>
+            <p>💲 <strong>Precio:</strong> ${{ articulo.precio }}</p>
+            <p>📦 <strong>Stock disponible:</strong> {{ articulo.stock }}</p>
+            <p>🏷️ <strong>Marca:</strong> {{ articulo.marca }}</p>
+
+            {% if articulo.activo %}
+                <p>✅ <strong>Estado:</strong> Artículo activo</p>
+            {% else %}
+                <p>❌ <strong>Estado:</strong> Artículo inactivo</p>
+            {% endif %}
+
+            <hr>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
