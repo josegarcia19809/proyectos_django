@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from miapp.models import Article
 
 
@@ -71,3 +71,10 @@ def ver_articulos_limit_rango(request):
     articulos = Article.objects.order_by("title")[3:7]  # del índice 3 al 6
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
+
+def borrar_articulo(request, id):
+    articulo = Article.objects.get(pk=id)
+    articulo.delete()
+    return redirect("articulos")
+

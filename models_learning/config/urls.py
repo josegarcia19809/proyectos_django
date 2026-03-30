@@ -31,4 +31,5 @@ urlpatterns = [
     path("articulos-limite", views.ver_articulos_limit, name="articulos_limite"),
     path("articulos-limite-rango", views.ver_articulos_limit_rango,
          name="articulos_limite_rango"),
+    path("borrar-articulo/<int:id>", views.borrar_articulo, name="borrar_articulo"),
 ]
