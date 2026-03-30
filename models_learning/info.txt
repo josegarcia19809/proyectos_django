@@ -1,15 +1,10 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Listar todos los artículos
+Modelos y bases de datos en Django: Limit y Order by
 
-Limit y Order by
-3:01
+
+
 Borrar elementos
-7:25
 Consultas con condiciones, filter y lookups
-8:49
 Exclude
-3:45
 Ejecutar SQL desde Django
-3:22
 OR en consultas con el ORM
-2:50

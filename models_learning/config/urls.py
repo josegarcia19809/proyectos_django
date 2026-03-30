@@ -26,4 +26,9 @@ urlpatterns = [
     path("ver-articulo/", views.ver_articulo, name="ver_articulo"),
     path("editar-articulo/<int:id>", views.editar_articulo, name="editar_articulo"),
     path("articulos", views.ver_articulos, name="articulos"),
+    path("articulos-ordenados", views.ver_articulos_ordenados,
+         name="articulos_ordenados"),
+    path("articulos-limite", views.ver_articulos_limit, name="articulos_limite"),
+    path("articulos-limite-rango", views.ver_articulos_limit_rango,
+         name="articulos_limite_rango"),
 ]

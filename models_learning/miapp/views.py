@@ -53,3 +53,21 @@ def ver_articulos(request):
     articulos = Article.objects.all()
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
+
+def ver_articulos_ordenados(request):
+    articulos = Article.objects.order_by("-title")  # forma descendente
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+
+def ver_articulos_limit(request):
+    articulos = Article.objects.order_by("title")[:3]  # Los 3 primeros
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+
+def ver_articulos_limit_rango(request):
+    articulos = Article.objects.order_by("title")[3:7]  # del índice 3 al 6
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
