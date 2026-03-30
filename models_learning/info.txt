@@ -1,5 +1,5 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Ejecutar SQL desde Django
+Modelos y bases de datos en Django: OR en consultas con el ORM
 
 
 
@@ -7,4 +7,3 @@ Modelos y bases de datos en Django: Ejecutar SQL desde Django
 
 
 
-OR en consultas con el ORM

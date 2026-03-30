@@ -44,5 +44,7 @@ urlpatterns = [
     path("articulos/raw-id/", views.obtener_articulos_raw_id, name="articulos_raw_id"),
     path("articulos/raw-excluir/", views.excluir_articulos_raw,
          name="articulos_raw_excluir"),
-
+    path("articulos/q/", views.buscar_articulos_q, name="articulos_q"),
+    path("articulos/q2/", views.articulos_publicos_o_memoria, name="articulos_q2"),
+    path("articulos/q-excluir/", views.excluir_con_q, name="articulos_q_excluir"),
 ]

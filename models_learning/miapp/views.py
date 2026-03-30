@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from miapp.models import Article
+from django.db.models import Q
 
 
 # Create your views here.
@@ -134,6 +135,27 @@ def obtener_articulos_raw_id(request):
 def excluir_articulos_raw(request):
     articulos = Article.objects.raw(
         "SELECT * FROM miapp_article WHERE public != 0"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def buscar_articulos_q(request):
+    articulos = Article.objects.filter(
+        Q(title__icontains="agua") | Q(content__icontains="agua")
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def articulos_publicos_o_memoria(request):
+    articulos = Article.objects.filter(
+        Q(public=True) & Q(title__icontains="memoria")
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def excluir_con_q(request):
+    articulos = Article.objects.filter(
+        ~Q(title__icontains="agua")
     )
     return render(request, "articulos.html",
                   {"articulos": articulos})
