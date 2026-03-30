@@ -1,7 +1,7 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Sacar datos y elementos de la base de datos
+Modelos y bases de datos en Django: Actualizar registros
 
-Actualizar registros
+
 4:51
 Listar todos los artículos
 5:42

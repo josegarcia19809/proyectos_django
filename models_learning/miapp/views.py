@@ -36,3 +36,14 @@ def ver_articulo(request):
     except:
         response = "<h1>Articulo no existe</h1>"
     return HttpResponse(response)
+
+
+def editar_articulo(request, id):
+    articulo = Article.objects.get(pk=id)
+    articulo.title = "Leche en polvo"
+    articulo.content = "Presentación familiar"
+    articulo.public = True
+
+    articulo.save()
+    return HttpResponse(
+        f"Artículo modificado: {articulo.title}, contenido: {articulo.content} ")

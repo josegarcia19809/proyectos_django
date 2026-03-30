@@ -24,4 +24,5 @@ urlpatterns = [
     path("crear-articulo2/<str:title>/<str:content>/<str:public>", views.crear_articulo2,
          name="crear_articulo2"),
     path("ver-articulo/", views.ver_articulo, name="ver_articulo"),
+    path("editar-articulo/<int:id>", views.editar_articulo, name="editar_articulo"),
 ]
