@@ -25,4 +25,5 @@ urlpatterns = [
          name="crear_articulo2"),
     path("ver-articulo/", views.ver_articulo, name="ver_articulo"),
     path("editar-articulo/<int:id>", views.editar_articulo, name="editar_articulo"),
+    path("articulos", views.ver_articulos, name="articulos"),
 ]

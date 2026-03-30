@@ -1,10 +1,6 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Actualizar registros
+Modelos y bases de datos en Django: Listar todos los artículos
 
-
-4:51
-Listar todos los artículos
-5:42
 Limit y Order by
 3:01
 Borrar elementos

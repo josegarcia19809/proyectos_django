@@ -47,3 +47,9 @@ def editar_articulo(request, id):
     articulo.save()
     return HttpResponse(
         f"Artículo modificado: {articulo.title}, contenido: {articulo.content} ")
+
+
+def ver_articulos(request):
+    articulos = Article.objects.all()
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
