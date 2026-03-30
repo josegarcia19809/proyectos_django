@@ -1,10 +1,10 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Borrar elementos
+Modelos y bases de datos en Django: Consultas con condiciones, filter y lookups
 
 
 
 
-Consultas con condiciones, filter y lookups
+
 Exclude
 Ejecutar SQL desde Django
 OR en consultas con el ORM

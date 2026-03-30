@@ -78,3 +78,33 @@ def borrar_articulo(request, id):
     articulo.delete()
     return redirect("articulos")
 
+def ver_articulos_publicos(request):
+    articulos = Article.objects.filter(public=True)
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def buscar_articulos_por_titulo(request):
+    articulos = Article.objects.filter(title__contains="agua")
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def obtener_articulo_exacto(request):
+    articulos = Article.objects.filter(
+        title__exact="Cómo mejorar tu memoria fácilmente"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def obtener_articulo_iexacto(request):
+    articulos = Article.objects.filter(
+        title__iexact="cómo mejorar tu memoria fácilmente"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+def obtener_articulos_mayor_id(request):
+    articulos = Article.objects.filter(id__gt=5)
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+
