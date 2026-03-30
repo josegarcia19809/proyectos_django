@@ -40,5 +40,9 @@ urlpatterns = [
          name="articulos_mayor_id"),
     path("articulos/excluir/", views.excluir_articulos_no_publicos,
          name="excluir_articulos"),
+    path("articulos/raw/", views.obtener_articulos_raw, name="articulos_raw"),
+    path("articulos/raw-id/", views.obtener_articulos_raw_id, name="articulos_raw_id"),
+    path("articulos/raw-excluir/", views.excluir_articulos_raw,
+         name="articulos_raw_excluir"),
 
 ]

@@ -113,4 +113,27 @@ def excluir_articulos_no_publicos(request):
                   {"articulos": articulos})
 
 
+# Consultas con SQL
+def obtener_articulos_raw(request):
+    articulos = Article.objects.raw(
+        "SELECT * FROM miapp_article WHERE public = 1"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
 
+
+def obtener_articulos_raw_id(request):
+    articulos = Article.objects.raw(
+        "SELECT * FROM miapp_article WHERE id > 5"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+
+
+def excluir_articulos_raw(request):
+    articulos = Article.objects.raw(
+        "SELECT * FROM miapp_article WHERE public != 0"
+    )
+    return render(request, "articulos.html",
+                  {"articulos": articulos})

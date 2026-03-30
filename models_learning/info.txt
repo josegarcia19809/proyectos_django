@@ -1,10 +1,10 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: Exclude
+Modelos y bases de datos en Django: Ejecutar SQL desde Django
 
 
 
 
 
 
-Ejecutar SQL desde Django
+
 OR en consultas con el ORM
