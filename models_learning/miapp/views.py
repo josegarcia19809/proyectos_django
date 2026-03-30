@@ -107,4 +107,10 @@ def obtener_articulos_mayor_id(request):
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
+def excluir_articulos_no_publicos(request):
+    articulos = Article.objects.exclude(public=True)
+    return render(request, "articulos.html",
+                  {"articulos": articulos})
+
+
 
