@@ -115,23 +115,23 @@ def excluir_articulos_inactivos(request):
 
 # 🔹 SQL RAW
 
-def obtener_articulos_raw(request):
+def obtener_articulos_precio_caro(request):
     articulos = Articulo.objects.raw(
-        "SELECT * FROM app_articulos_articulo WHERE activo = 1"
+        "SELECT * FROM app_articulos_articulo WHERE precio > 50"
     )
     return render(request, "articulos.html", {"articulos": articulos})
 
 
-def obtener_articulos_raw_id(request):
+def obtener_articulos_id_mayor5(request):
     articulos = Articulo.objects.raw(
         "SELECT * FROM app_articulos_articulo WHERE id > 5"
     )
     return render(request, "articulos.html", {"articulos": articulos})
 
 
-def excluir_articulos_raw(request):
+def obtener_articulos_activos(request):
     articulos = Articulo.objects.raw(
-        "SELECT * FROM app_articulos_articulo WHERE activo != 0"
+        "SELECT * FROM app_articulos_articulo WHERE activo = 1"
     )
     return render(request, "articulos.html", {"articulos": articulos})
 
@@ -140,7 +140,7 @@ def excluir_articulos_raw(request):
 
 def buscar_articulos_q(request):
     articulos = Articulo.objects.filter(
-        Q(nombre__icontains="agua") | Q(descripcion__icontains="agua")
+        Q(nombre__icontains="1kg") | Q(descripcion__icontains="agua")
     )
     return render(request, "articulos.html", {"articulos": articulos})
 
@@ -154,6 +154,6 @@ def articulos_activos_y_nombre(request):
 
 def excluir_con_q(request):
     articulos = Articulo.objects.filter(
-        ~Q(nombre__icontains="agua")
+        ~Q(nombre__icontains="1kg")
     )
     return render(request, "articulos.html", {"articulos": articulos})

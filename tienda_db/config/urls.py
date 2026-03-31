@@ -46,10 +46,12 @@ urlpatterns = [
          name='articulos_inactivos'),
 
     # SQL RAW
-    path('articulos-raw/', views.obtener_articulos_raw, name='articulos_raw'),
-    path('articulos-raw-id/', views.obtener_articulos_raw_id, name='articulos_raw_id'),
-    path('articulos-raw-excluir/', views.excluir_articulos_raw,
-         name='articulos_raw_excluir'),
+    path('articulos-precio_caro/', views.obtener_articulos_precio_caro,
+         name='articulos_precio_caro'),
+    path('articulos-id-mayor5/', views.obtener_articulos_id_mayor5,
+         name='articulos_id_mayor5'),
+    path('articulos-activos/', views.obtener_articulos_activos,
+         name='articulos_activos'),
 
     # Consultas con Q
     path('articulos-q/', views.buscar_articulos_q, name='articulos_q'),
