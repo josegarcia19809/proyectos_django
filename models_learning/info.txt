@@ -1,7 +1,28 @@
 Basado en Curso de Victor Robles
-Modelos y bases de datos en Django: OR en consultas con el ORM
+Formularios en Django: Formularios, crear vistas y urls
 
 
+6:25
+Formulario en HTML
+5:10
+Estilos del formulario
+8:16
+Recibir datos del formulario por GET
+6:10
+Recoger datos del formulario por POST
+3:21
+Formularios basados en clases
+10:36
+Campo de tipo Select
+3:29
+Recibir datos y guardar el formulario (Django Form API)
+6:50
+Personalizar formularios
+5:24
+Validar formularios en Django
+11:00
+Mensajes flash / sesiones flash
+6:42
 
 
 

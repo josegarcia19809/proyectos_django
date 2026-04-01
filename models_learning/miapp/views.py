@@ -159,3 +159,17 @@ def excluir_con_q(request):
     )
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
+def guardar_articulo(request):
+    articulo = Article(
+        title=title,
+        content=content,
+        public=public,
+
+    )
+    articulo.save()
+    return HttpResponse(
+        f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
+
+def crear_articulo_form(request):
+    return render(request, "crear_articulo.html",)
