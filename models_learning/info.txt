@@ -1,12 +1,6 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Formularios, crear vistas y urls
+Formularios en Django: Estilos del formulario
 
-
-6:25
-Formulario en HTML
-5:10
-Estilos del formulario
-8:16
 Recibir datos del formulario por GET
 6:10
 Recoger datos del formulario por POST

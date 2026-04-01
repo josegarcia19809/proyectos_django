@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulario Artículo</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
 <body>
-<h1>Formulario Artículo</h1>
+
+<div class="container">
+    <h1>Formulario Artículo</h1>
+
+    <form action="{% url 'guardar_articulo' %}" method="get">
+
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title">
+
+        <label for="content">Contenido:</label>
+        <textarea id="content" name="content"></textarea>
+
+        <label for="public">¿Publicado?</label>
+        <select id="public" name="public">
+            <option value="True">Sí</option>
+            <option value="False">No</option>
+        </select>
+
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+
 </body>
 </html>
