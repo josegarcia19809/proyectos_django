@@ -1,7 +1,7 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Estilos del formulario
+Formularios en Django: Recibir datos del formulario por GET
 
-Recibir datos del formulario por GET
+
 6:10
 Recoger datos del formulario por POST
 3:21

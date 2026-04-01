@@ -79,15 +79,18 @@ def borrar_articulo(request, id):
     articulo.delete()
     return redirect("articulos")
 
+
 def ver_articulos_publicos(request):
     articulos = Article.objects.filter(public=True)
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
+
 def buscar_articulos_por_titulo(request):
     articulos = Article.objects.filter(title__contains="agua")
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
 
 def obtener_articulo_exacto(request):
     articulos = Article.objects.filter(
@@ -96,6 +99,7 @@ def obtener_articulo_exacto(request):
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
+
 def obtener_articulo_iexacto(request):
     articulos = Article.objects.filter(
         title__iexact="cómo mejorar tu memoria fácilmente"
@@ -103,10 +107,12 @@ def obtener_articulo_iexacto(request):
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
+
 def obtener_articulos_mayor_id(request):
     articulos = Article.objects.filter(id__gt=5)
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
 
 def excluir_articulos_no_publicos(request):
     articulos = Article.objects.exclude(public=True)
@@ -131,13 +137,13 @@ def obtener_articulos_raw_id(request):
                   {"articulos": articulos})
 
 
-
 def excluir_articulos_raw(request):
     articulos = Article.objects.raw(
         "SELECT * FROM miapp_article WHERE public != 0"
     )
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
 
 def buscar_articulos_q(request):
     articulos = Article.objects.filter(
@@ -146,12 +152,14 @@ def buscar_articulos_q(request):
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
+
 def articulos_publicos_o_memoria(request):
     articulos = Article.objects.filter(
         Q(public=True) & Q(title__icontains="memoria")
     )
     return render(request, "articulos.html",
                   {"articulos": articulos})
+
 
 def excluir_con_q(request):
     articulos = Article.objects.filter(
@@ -160,16 +168,24 @@ def excluir_con_q(request):
     return render(request, "articulos.html",
                   {"articulos": articulos})
 
-def guardar_articulo(request):
-    articulo = Article(
-        title=title,
-        content=content,
-        public=public,
 
-    )
-    articulo.save()
-    return HttpResponse(
-        f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
+def guardar_articulo(request):
+    if request.method == "GET":
+        title = request.GET.get("title")
+        content = request.GET.get("content")
+        public = request.GET.get("public")
+
+        articulo = Article(
+            title=title,
+            content=content,
+            public=public,
+        )
+        articulo.save()
+        return HttpResponse(
+            f"Artículo creado: {articulo.title}, contenido: {articulo.content} ")
+    else:
+        return HttpResponse("<h2>No se podido crear el artículo</h2>")
+
 
 def crear_articulo_form(request):
-    return render(request, "crear_articulo.html",)
+    return render(request, "crear_articulo.html", )
