@@ -13,8 +13,8 @@
 <div class="container">
     <h1>Formulario Artículo</h1>
 
-    <form action="{% url 'guardar_articulo' %}" method="get">
-
+    <form action="{% url 'guardar_articulo' %}" method="post">
+        {% csrf_token %}
         <label for="title">Título:</label>
         <input type="text" id="title" name="title">
 

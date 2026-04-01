@@ -170,15 +170,15 @@ def excluir_con_q(request):
 
 
 def guardar_articulo(request):
-    if request.method == "GET":
-        title = request.GET.get("title")
-        content = request.GET.get("content")
-        public = request.GET.get("public")
+    if request.method == "POST":
+        title = request.POST.get("title")
+        content = request.POST.get("content")
+        public = request.POST.get("public")
 
         articulo = Article(
             title=title,
             content=content,
-            public=public,
+            public=public == "True",
         )
         articulo.save()
         return HttpResponse(
