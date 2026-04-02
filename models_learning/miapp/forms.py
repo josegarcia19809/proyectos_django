@@ -15,7 +15,7 @@ class FormArticle(forms.Form):
 
     public_options = [
         (1, 'Si'),
-        (2, 'No'),
+        (0, 'No'),
     ]
 
     public = forms.TypedChoiceField(

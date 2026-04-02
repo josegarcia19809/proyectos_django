@@ -32,7 +32,7 @@ urlpatterns = [
     path("articulos-limite-rango/", views.ver_articulos_limit_rango,
          name="articulos_limite_rango"),
     path("borrar-articulo/<int:id>/", views.borrar_articulo, name="borrar_articulo"),
-    path("articulos-publicos/", views.ver_articulos_publicos, name="articulos"),
+    path("articulos-publicos/", views.ver_articulos_publicos, name="articulos_publicados"),
     path("articulos/buscar/", views.buscar_articulos_por_titulo, name="buscar_articulos"),
     path("articulos/exacto/", views.obtener_articulo_exacto, name="articulo_exacto"),
     path("articulos/iexacto/", views.obtener_articulo_iexacto, name="articulo_iexacto"),

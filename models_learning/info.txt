@@ -1,12 +1,6 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Campo de tipo Select
+Formularios en Django: Recibir datos y guardar el formulario (Django Form API)
 
-
-10:36
-
-3:29
-Recibir datos y guardar el formulario (Django Form API)
-6:50
 Personalizar formularios
 5:24
 Validar formularios en Django

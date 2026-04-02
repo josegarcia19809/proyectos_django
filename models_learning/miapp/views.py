@@ -193,5 +193,23 @@ def crear_articulo_form(request):
 
 
 def crear_full_articulo(request):
-    formulario = FormArticle
+    if request.method == "POST":
+        formulario = FormArticle(request.POST)
+        if formulario.is_valid():
+            data_form = formulario.cleaned_data
+            title = data_form["title"]
+            content = data_form["content"]
+            public = data_form["public"]
+
+            articulo = Article(
+                title=title,
+                content=content,
+                public=public == "True",
+            )
+            articulo.save()
+            return redirect("articulos")
+            # return HttpResponse("Guardado: "+title + "- " + content + "- " + public)
+    else:
+        formulario = FormArticle()
+
     return render(request, "full_articulo.html", {"formulario": formulario})
