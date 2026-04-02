@@ -49,4 +49,6 @@ urlpatterns = [
     path("articulos/q-excluir/", views.excluir_con_q, name="articulos_q_excluir"),
     path("guardar-articulo/", views.guardar_articulo, name="guardar_articulo"),
     path("crear-articulo-form/", views.crear_articulo_form, name="crear_articulo_form"),
+    path("crear-articulo-form-full/", views.crear_full_articulo,
+         name="crear_full_articulo"),
 ]

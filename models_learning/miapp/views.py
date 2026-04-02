@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from miapp.models import Article
 from django.db.models import Q
+from miapp.forms import FormArticle
 
 
 # Create your views here.
@@ -189,3 +190,8 @@ def guardar_articulo(request):
 
 def crear_articulo_form(request):
     return render(request, "crear_articulo.html", )
+
+
+def crear_full_articulo(request):
+    formulario = FormArticle
+    return render(request, "full_articulo.html", {"formulario": formulario})

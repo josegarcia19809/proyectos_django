@@ -1,7 +1,7 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Recoger datos del formulario por POST
+Formularios en Django: Formularios basados en clases
 
-Formularios basados en clases
+
 10:36
 Campo de tipo Select
 3:29
