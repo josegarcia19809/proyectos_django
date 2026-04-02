@@ -1,4 +1,5 @@
 from cProfile import label
+from random import choices
 
 from django import forms
 
@@ -10,4 +11,14 @@ class FormArticle(forms.Form):
     content = forms.CharField(
         label="Contenido",
         widget=forms.Textarea()
+    )
+
+    public_options = [
+        (1, 'Si'),
+        (2, 'No'),
+    ]
+
+    public = forms.TypedChoiceField(
+        label='Publicado?',
+        choices=public_options
     )
