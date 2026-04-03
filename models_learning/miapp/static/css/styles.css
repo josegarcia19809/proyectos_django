@@ -23,7 +23,39 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+/* Contenedor general de errores */
+.errores {
+    background-color: #ffe6e6;
+    border: 1px solid #ff4d4d;
+    color: #cc0000;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
 
+/* Lista de errores */
+.errores ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.errores li {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Error por campo */
+.error-text {
+    color: #e60000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Inputs con error */
+input.error, textarea.error, select.error {
+    border: 2px solid #ff4d4d;
+    background-color: #fff5f5;
+}
 /* Labels */
 label {
     font-weight: bold;
