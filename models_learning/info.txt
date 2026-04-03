@@ -1,4 +1,21 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Mensajes flash / sesiones flash
+Panel de administración y modelos: Primeros pasos con el panel de administración de Django
 
 
+9:29
+Clase Meta en los modelos de Django 3
+6:11
+Manipular propiedades de los modelos
+2:16
+Cambiar el nombre de las apps
+3:29
+Método mágico para imprimir objetos (modelos)
+4:36
+Mostrar campos de solo lectura
+
+
+
+
+
+admin
+pass
