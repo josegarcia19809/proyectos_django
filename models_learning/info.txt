@@ -1,7 +1,7 @@
 Basado en Curso de Victor Robles
-Panel de administración y modelos: Manipular propiedades de los modelos
+Panel de administración y modelos: Cambiar el nombre de las apps
 
-Cambiar el nombre de las apps
+
 3:29
 Método mágico para imprimir objetos (modelos)
 4:36
