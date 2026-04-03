@@ -1,9 +1,9 @@
 Basado en Curso de Victor Robles
-Panel de administración y modelos: Primeros pasos con el panel de administración de Django
+Panel de administración y modelos: Clase Meta en los modelos de Django 3
 
 
 9:29
-Clase Meta en los modelos de Django 3
+
 6:11
 Manipular propiedades de los modelos
 2:16
