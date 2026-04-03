@@ -1,12 +1,6 @@
 Basado en Curso de Victor Robles
-Panel de administración y modelos: Clase Meta en los modelos de Django 3
+Panel de administración y modelos: Manipular propiedades de los modelos
 
-
-9:29
-
-6:11
-Manipular propiedades de los modelos
-2:16
 Cambiar el nombre de las apps
 3:29
 Método mágico para imprimir objetos (modelos)
