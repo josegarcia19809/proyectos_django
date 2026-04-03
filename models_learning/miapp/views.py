@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from miapp.models import Article
 from django.db.models import Q
 from miapp.forms import FormArticle
+from django.contrib import messages
 
 
 # Create your views here.
@@ -207,6 +208,7 @@ def crear_full_articulo(request):
                 public=public == "True",
             )
             articulo.save()
+            messages.success(request, "Artículo creado exitosamente...")
             return redirect("articulos")
             # return HttpResponse("Guardado: "+title + "- " + content + "- " + public)
     else:

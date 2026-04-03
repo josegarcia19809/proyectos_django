@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Listado de artículos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles_articulos.css' %}">
 </head>
 <body>
-<h1>Listado de artículos</h1>
-<ul>
-    {% for articulo in articulos %}
-    <li>
-        <h4>{{ articulo.id }}. {{articulo.title}} </h4>
-        <p>{{articulo.content}}</p>
-        <a href="{% url 'borrar_articulo' articulo.id %}">Eliminar</a>
-    </li>
+<div class="container">
+    <h1>Listado de artículos</h1>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="message {{ message.tags }}">
+        {{ message }}
+    </div>
     {% endfor %}
-</ul>
+
+    {% endif %}
+
+    <ul>
+        {% for articulo in articulos %}
+        <li>
+            <h4>{{ articulo.id }}. {{articulo.title}} </h4>
+            <p>{{articulo.content}}</p>
+            <a href="{% url 'borrar_articulo' articulo.id %}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 </body>
 </html>

@@ -1,5 +1,4 @@
 Basado en Curso de Victor Robles
-Formularios en Django: Validar formularios en Django
+Formularios en Django: Mensajes flash / sesiones flash
 
 
-Mensajes flash / sesiones flash
