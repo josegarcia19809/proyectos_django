@@ -10,6 +10,12 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
     updated_at = models.DateTimeField(auto_now=True,
                                       verbose_name="Fecha de actualizacion")
+    def __str__(self):
+        if self.public:
+            publico = "(publicado)"
+        else:
+            publico = "(no publicado)"
+        return f"{self.title}, creado el {self.created_at}; {publico}"
 
 
 class Category(models.Model):
