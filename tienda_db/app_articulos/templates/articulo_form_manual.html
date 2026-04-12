@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear artículo</title>
+</head>
+<body>
+<form action="{% url 'guardar_articulo' %}" method="post">
+    {% csrf_token %}
+
+    <label>Nombre:</label>
+    <input type="text" name="nombre">
+
+    <label>Descripción:</label>
+    <textarea name="descripcion"></textarea>
+
+    <label>Precio:</label>
+    <input type="number" name="precio">
+
+    <label>Stock:</label>
+    <input type="number" name="stock">
+
+    <label>Marca:</label>
+    <input type="text" name="marca">
+
+    <label>Activo:</label>
+    <select name="activo">
+        <option value="True">Sí</option>
+        <option value="False">No</option>
+    </select>
+
+    <button type="submit">Guardar</button>
+</form>
+
+</body>
+</html>

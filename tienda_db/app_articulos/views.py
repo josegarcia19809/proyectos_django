@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from app_articulos.models import Articulo
 from django.db.models import Q
+from .forms import ArticuloForm
 
 
 def crear_articulo(request):
@@ -157,3 +158,40 @@ def excluir_con_q(request):
         ~Q(nombre__icontains="1kg")
     )
     return render(request, "articulos.html", {"articulos": articulos})
+
+
+def formulario_manual(request):
+    return render(request, "articulo_form_manual.html")
+
+
+def guardar_articulo(request):
+    if request.method == "POST":
+        nombre = request.POST.get("nombre")
+        descripcion = request.POST.get("descripcion")
+        precio = request.POST.get("precio")
+        stock = request.POST.get("stock")
+        marca = request.POST.get("marca")
+        activo = request.POST.get("activo") == "True"
+
+        Articulo.objects.create(
+            nombre=nombre,
+            descripcion=descripcion,
+            precio=precio,
+            stock=stock,
+            marca=marca,
+            activo=activo
+        )
+
+        return redirect("articulos")
+
+
+def formulario_django(request):
+    if request.method == "POST":
+        formulario = ArticuloForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect("articulos")
+    else:
+        formulario = ArticuloForm()
+
+    return render(request, "articulo_form.html", {"formulario": formulario})

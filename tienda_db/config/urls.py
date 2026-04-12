@@ -58,4 +58,9 @@ urlpatterns = [
     path('articulos-activos-nombre/', views.articulos_activos_y_nombre,
          name='articulos_activos_nombre'),
     path('articulos-excluir-q/', views.excluir_con_q, name='articulos_excluir_q'),
+
+    path('formulario-manual/', views.formulario_manual, name='formulario_manual'),
+    path('guardar-articulo/', views.guardar_articulo, name='guardar_articulo'),
+    path('formulario-django/', views.formulario_django, name='formulario_django'),
+
 ]
