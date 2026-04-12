@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Crear un artículo</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<h1>Crear un artículo</h1>
-{% if formulario.errors %}
-    <div class="errores">
-        <h3>
-            Hay errores en el formulario
-        </h3>
-    </div>
-{% endif %}
-<form method="post">
-    {% csrf_token %}
-    {{ formulario.as_p }}
 
-    <button type="submit">Guardar</button>
-</form>
+{% if formulario.instance.pk %}
+    <h1>✏️ Editar artículo</h1>
+{% else %}
+    <h1>➕ Crear un artículo</h1>
+{% endif %}
+
+<div class="form-container">
+
+    {% if formulario.errors %}
+        <div class="message error">
+            <h3>❌ Hay errores en el formulario</h3>
+        </div>
+    {% endif %}
+
+    <form method="post" class="formulario">
+        {% csrf_token %}
+
+        {{ formulario.as_p }}
+
+        <div style="text-align:center;">
+            <button type="submit" class="btn btn-agregar">
+                {% if formulario.instance.pk %}
+                    ✏️ Actualizar
+                {% else %}
+                    💾 Guardar
+                {% endif %}
+            </button>
+        </div>
+    </form>
+
+</div>
+
+<a href="{% url 'articulos' %}" class="btn btn-ver">⬅️ Volver</a>
 
 </body>
 </html>

@@ -199,3 +199,25 @@ def formulario_django(request):
         formulario = ArticuloForm()
 
     return render(request, "articulo_form.html", {"formulario": formulario})
+
+
+def detalle_articulo(request, id):
+    articulo = Articulo.objects.get(pk=id)
+    return render(request, "detalle_articulo.html", {"articulo": articulo})
+
+
+def editar_articulo_form(request, id):
+    articulo = Articulo.objects.get(pk=id)
+
+    if request.method == "POST":
+        formulario = ArticuloForm(request.POST, instance=articulo)
+        if formulario.is_valid():
+            formulario.save()
+            messages.success(request, "Artículo actualizado correctamente ✏️")
+            return redirect("articulos")
+        else:
+            messages.error(request, "Error al editar ❌")
+    else:
+        formulario = ArticuloForm(instance=articulo)
+
+    return render(request, "articulo_form.html", {"formulario": formulario})

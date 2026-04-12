@@ -62,5 +62,7 @@ urlpatterns = [
     path('formulario-manual/', views.formulario_manual, name='formulario_manual'),
     path('guardar-articulo/', views.guardar_articulo, name='guardar_articulo'),
     path('formulario-django/', views.formulario_django, name='formulario_django'),
-
+    path('detalle-articulo/<int:id>/', views.detalle_articulo, name='detalle_articulo'),
+    path('editar-articulo-form/<int:id>/', views.editar_articulo_form,
+         name='editar_articulo_form'),
 ]

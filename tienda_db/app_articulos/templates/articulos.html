@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Lista de artículos</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<h1>Lista de artículos</h1>
+
+<h1>🛒 Lista de artículos</h1>
+
+<!-- 🔹 Botón agregar -->
+<div style="text-align:center;">
+    <a href="{% url 'formulario_django' %}" class="btn btn-agregar">
+        ➕ Agregar producto
+    </a>
+</div>
+
+<!-- 🔹 Mensajes -->
 {% if messages %}
     {% for message in messages %}
         <div class="message {{ message.tags }}">
@@ -14,25 +27,42 @@
     {% endfor %}
 {% endif %}
 
-<ul>
-    {% for articulo in articulos %}
-        <li>
-            <h3>🆔 {{ articulo.id }} | 🛒 {{ articulo.nombre }}</h3>
+<!-- 🔹 Lista de artículos -->
+{% for articulo in articulos %}
+    <div class="card">
 
-            <p>📝 <strong>Descripción:</strong> {{ articulo.descripcion }}</p>
-            <p>💲 <strong>Precio:</strong> ${{ articulo.precio }}</p>
-            <p>📦 <strong>Stock disponible:</strong> {{ articulo.stock }}</p>
-            <p>🏷️ <strong>Marca:</strong> {{ articulo.marca }}</p>
+        <h3>🆔 {{ articulo.id }} | 🛒 {{ articulo.nombre }}</h3>
 
-            {% if articulo.activo %}
-                <p>✅ <strong>Estado:</strong> Artículo activo</p>
-            {% else %}
-                <p>❌ <strong>Estado:</strong> Artículo inactivo</p>
-            {% endif %}
+        <p>📝 <strong>Descripción:</strong> {{ articulo.descripcion }}</p>
+        <p>💲 <strong>Precio:</strong> ${{ articulo.precio }}</p>
+        <p>📦 <strong>Stock:</strong> {{ articulo.stock }}</p>
+        <p>🏷️ <strong>Marca:</strong> {{ articulo.marca }}</p>
 
-            <hr>
-        </li>
-    {% endfor %}
-</ul>
+        {% if articulo.activo %}
+            <p class="activo">✅ Activo</p>
+        {% else %}
+            <p class="inactivo">❌ Inactivo</p>
+        {% endif %}
+
+        <!-- 🔹 Acciones -->
+        <div>
+            <a href="{% url 'detalle_articulo' articulo.id %}" class="btn btn-ver">👁️ Ver</a>
+            <a href="{% url 'editar_articulo_form' articulo.id %}" class="btn btn-editar">✏️ Editar</a>
+            <a href="{% url 'borrar_articulo' articulo.id %}" class="btn btn-borrar">🗑️ Eliminar</a>
+        </div>
+
+    </div>
+{% empty %}
+    <p style="text-align:center;">No hay artículos registrados 😢</p>
+{% endfor %}
+
+<!-- 🔹 Script para ocultar mensajes -->
+<script>
+    setTimeout(() => {
+        const mensajes = document.querySelectorAll('.message');
+        mensajes.forEach(m => m.style.display = 'none');
+    }, 3000);
+</script>
+
 </body>
 </html>

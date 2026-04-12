@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    font-family: Arial;
+    background-color: #f4f6f9;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 12px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-agregar { background-color: green; }
+.btn-ver { background-color: blue; }
+.btn-editar { background-color: orange; }
+.btn-borrar { background-color: red; }
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+.activo { color: green; }
+.inactivo { color: red; }
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.success { background-color: #d4edda; }
+.error { background-color: #f8d7da; }
+
+/* Contenedor del formulario */
+.form-container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botón */
+.formulario button {
+    font-size: 16px;
+}

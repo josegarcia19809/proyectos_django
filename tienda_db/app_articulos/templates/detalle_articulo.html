@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del artículo</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<h1>👁️ Detalle del artículo</h1>
+
+<div class="card">
+    <h2>{{ articulo.nombre }}</h2>
+
+    <p><strong>Descripción:</strong> {{ articulo.descripcion }}</p>
+    <p><strong>Precio:</strong> ${{ articulo.precio }}</p>
+    <p><strong>Stock:</strong> {{ articulo.stock }}</p>
+    <p><strong>Marca:</strong> {{ articulo.marca }}</p>
+
+    {% if articulo.activo %}
+        <p class="activo">✅ Activo</p>
+    {% else %}
+        <p class="inactivo">❌ Inactivo</p>
+    {% endif %}
+</div>
+
+<a href="{% url 'articulos' %}" class="btn btn-ver">⬅️ Volver</a>
+
+</body>
+</html>
