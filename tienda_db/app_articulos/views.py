@@ -191,7 +191,10 @@ def formulario_django(request):
         formulario = ArticuloForm(request.POST)
         if formulario.is_valid():
             formulario.save()
+            messages.success(request, "Artículo guardado correctamente ✅")
             return redirect("articulos")
+        else:
+            messages.error(request, "Error en el formulario")
     else:
         formulario = ArticuloForm()
 
