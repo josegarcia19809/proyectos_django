@@ -6,6 +6,7 @@ from django.shortcuts import render, redirect
 from app_articulos.models import Articulo
 from django.db.models import Q
 from .forms import ArticuloForm
+from django.contrib import messages
 
 
 def crear_articulo(request):

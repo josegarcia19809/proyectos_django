@@ -6,6 +6,13 @@
 </head>
 <body>
 <h1>Crear un artículo</h1>
+{% if formulario.errors %}
+    <div class="errores">
+        <h3>
+            Hay errores en el formulario
+        </h3>
+    </div>
+    {% endif %}
 <form method="post">
     {% csrf_token %}
     {{ formulario.as_p }}
