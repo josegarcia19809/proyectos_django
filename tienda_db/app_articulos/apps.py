@@ -4,3 +4,4 @@ from django.apps import AppConfig
 class AppArticulosConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'app_articulos'
+    verbose_name = "Gestión de Artículos 🛒"

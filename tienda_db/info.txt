@@ -1,1 +1,8 @@
-Tienda de artículos: Uso de estilos
+Tienda de artículos: Panel de Administración en Django
+
+
+
+usuario: admin
+password: pass
+
+
