@@ -56,6 +56,8 @@ urlpatterns = [
 
 # Configurar el titulo del panel
 admin.site.site_header = "Tienda de artículos"
+admin.site.site_title = "Tienda de artículos"
+admin.site.index_title = "Panel de gestión"
 
 
 # Configuración para cargar imágenes
