@@ -1,11 +1,8 @@
 Basado en Curso de Victor Robles
 
 
-Configuraciones básicas del panel de administración de Django: Cambiar subtitulo del panel
+Configuraciones básicas del panel de administración de Django: Mejorar la configuración del panel
 
-
-250. Mejorar la configuración del panel
-2 min
 
 Panel de administración
 admin
