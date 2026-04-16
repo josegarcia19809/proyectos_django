@@ -1,10 +1,8 @@
 Basado en Curso de Victor Robles
 
 
-Subir imágenes - Django Admin Panel: Mostrar imágenes subidas en la web
+Subir imágenes - Django Admin Panel: Maquetar con CSS listado de artículos con imágenes
 
-246.
-247. Maquetar con CSS listado de artículos con imágenes
 
 
 Panel de administración

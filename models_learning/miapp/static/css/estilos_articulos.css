@@ -1,0 +1,94 @@
+/* 🌙 Fondo general */
+body {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📦 Contenedor */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* 🧾 Título */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* 📋 Lista */
+.lista-articulos {
+    list-style: none;
+    padding: 0;
+}
+
+/* 🪪 Tarjeta */
+.card {
+    background: #1e293b;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* 🖼 Imagen */
+.imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* 📄 Contenido */
+.contenido {
+    padding: 15px;
+}
+
+/* 🏷 Título artículo */
+h4 {
+    margin: 0 0 10px;
+    color: #38bdf8;
+}
+
+/* 📝 Texto */
+p {
+    margin-bottom: 15px;
+}
+
+/* 🔴 Botón eliminar */
+.btn-eliminar {
+    text-decoration: none;
+    background: #ef4444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+    background: #dc2626;
+}
+
+/* 💬 Mensajes */
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* colores para mensajes */
+.message.success {
+    background: #16a34a;
+}
+
+.message.error {
+    background: #dc2626;
+}

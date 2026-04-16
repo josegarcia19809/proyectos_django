@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <title>Listado de artículos</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles_articulos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilos_articulos.css' %}">
 </head>
 <body>
 <div class="container">
-    <h1>Listado de artículos</h1>
+    <h1>📚 Listado de artículos</h1>
 
     {% if messages %}
-    {% for message in messages %}
-    <div class="message {{ message.tags }}">
-        {{ message }}
-    </div>
-    {% endfor %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
     {% endif %}
 
-    <ul>
+    <ul class="lista-articulos">
         {% for articulo in articulos %}
-        <li>
+        <li class="card">
             {% if articulo.image %}
-                <img src="{{ articulo.image.url }}" />
+                <img src="{{ articulo.image.url }}" class="imagen" />
             {% endif %}
-            <h4>{{ articulo.id }}. {{articulo.title}} </h4>
-            <p>{{articulo.content}}</p>
-            <a href="{% url 'borrar_articulo' articulo.id %}">Eliminar</a>
+
+            <div class="contenido">
+                <h4>{{ articulo.id }}. {{articulo.title}}</h4>
+                <p>{{articulo.content}}</p>
+                <a href="{% url 'borrar_articulo' articulo.id %}" class="btn-eliminar">
+                    🗑 Eliminar
+                </a>
+            </div>
         </li>
         {% endfor %}
     </ul>
