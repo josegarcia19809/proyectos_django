@@ -54,6 +54,9 @@ urlpatterns = [
          name="crear_full_articulo"),
 ]
 
+# Configurar el titulo del panel
+admin.site.site_header = "Tienda de artículos"
+
 
 # Configuración para cargar imágenes
 if settings.DEBUG:

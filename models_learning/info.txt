@@ -1,10 +1,19 @@
 Basado en Curso de Victor Robles
 
 
-Subir imágenes - Django Admin Panel: Maquetar con CSS listado de artículos con imágenes
+Configuraciones básicas del panel de administración de Django: Cambiar titulo del panel
 
 
+2 min
+Reproducir
+249. Cambiar subtitulo del panel
+2 min
+Reproducir
+250. Mejorar la configuración del panel
+2 min
 
 Panel de administración
 admin
 pass
+
+pip install Pillow
