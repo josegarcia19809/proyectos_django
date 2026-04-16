@@ -21,6 +21,9 @@
     <ul>
         {% for articulo in articulos %}
         <li>
+            {% if articulo.image %}
+                <img src="{{ articulo.image.url }}" />
+            {% endif %}
             <h4>{{ articulo.id }}. {{articulo.title}} </h4>
             <p>{{articulo.content}}</p>
             <a href="{% url 'borrar_articulo' articulo.id %}">Eliminar</a>
