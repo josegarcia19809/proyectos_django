@@ -9,6 +9,10 @@ class Articulo(models.Model):
     stock = models.IntegerField(verbose_name="Cantidad en stock")
     marca = models.CharField(max_length=100, verbose_name="Marca")
     activo = models.BooleanField(default=True, verbose_name="¿Está activo?")
+    imagen = models.ImageField(
+        upload_to='articulos', verbose_name="Imagen",
+        null=True, blank=True
+    )
 
     def __str__(self):
         return f"{self.nombre} ({self.marca}) - ${self.precio}"
@@ -16,6 +20,3 @@ class Articulo(models.Model):
     class Meta:
         verbose_name = "Artículo"
         verbose_name_plural = "Artículos"
-
-
-

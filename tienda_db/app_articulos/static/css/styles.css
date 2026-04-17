@@ -68,3 +68,139 @@ h1 {
 .formulario button {
     font-size: 16px;
 }
+
+/* 🔹 Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 🔹 Fondo general */
+body {
+    background: #f4f6f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* 🔹 Título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Botones */
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Colores de botones */
+.btn-agregar {
+    background: #28a745;
+}
+.btn-agregar:hover {
+    background: #218838;
+}
+
+.btn-ver {
+    background: #007bff;
+}
+.btn-ver:hover {
+    background: #0069d9;
+}
+
+.btn-editar {
+    background: #ffc107;
+    color: #333;
+}
+.btn-editar:hover {
+    background: #e0a800;
+}
+
+.btn-borrar {
+    background: #dc3545;
+}
+.btn-borrar:hover {
+    background: #c82333;
+}
+
+/* 🔹 Mensajes */
+.message {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* 🔹 Tarjetas */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* 🔹 Imagen */
+.imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* 🔹 Texto dentro de card */
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* 🔹 Estado */
+.activo {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.inactivo {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 600px) {
+    .card {
+        margin: 10px;
+    }
+}

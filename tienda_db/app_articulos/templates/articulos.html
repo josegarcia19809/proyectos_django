@@ -30,7 +30,9 @@
 <!-- 🔹 Lista de artículos -->
 {% for articulo in articulos %}
     <div class="card">
-
+        {% if articulo.imagen %}
+                <img src="{{ articulo.imagen.url }}" class="imagen" />
+        {% endif %}
         <h3>🆔 {{ articulo.id }} | 🛒 {{ articulo.nombre }}</h3>
 
         <p>📝 <strong>Descripción:</strong> {{ articulo.descripcion }}</p>

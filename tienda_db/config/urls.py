@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app_articulos import views
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -66,3 +67,9 @@ urlpatterns = [
     path('editar-articulo-form/<int:id>/', views.editar_articulo_form,
          name='editar_articulo_form'),
 ]
+
+
+# Configuración para cargar imágenes
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
