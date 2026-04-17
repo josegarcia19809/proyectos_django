@@ -188,7 +188,7 @@ def guardar_articulo(request):
 
 def formulario_django(request):
     if request.method == "POST":
-        formulario = ArticuloForm(request.POST)
+        formulario = ArticuloForm(request.POST, request.FILES)
         if formulario.is_valid():
             formulario.save()
             messages.success(request, "Artículo guardado correctamente ✅")
@@ -210,8 +210,12 @@ def editar_articulo_form(request, id):
     articulo = Articulo.objects.get(pk=id)
 
     if request.method == "POST":
-        formulario = ArticuloForm(request.POST, instance=articulo)
+        formulario = ArticuloForm(request.POST, request.FILES, instance=articulo)
         if formulario.is_valid():
+            # 🔥 AQUÍ VA
+            if 'image' in request.FILES:
+                if articulo.imagen:
+                    articulo.imagen.delete(save=False)
             formulario.save()
             messages.success(request, "Artículo actualizado correctamente ✏️")
             return redirect("articulos")

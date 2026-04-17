@@ -23,10 +23,19 @@
         </div>
     {% endif %}
 
-    <form method="post" class="formulario">
+    <!-- 🔥 IMPORTANTE: enctype agregado -->
+    <form method="post" enctype="multipart/form-data" class="formulario">
         {% csrf_token %}
 
         {{ formulario.as_p }}
+
+        <!-- 🖼️ Vista previa si ya existe imagen -->
+        {% if formulario.instance.image %}
+            <div style="text-align:center; margin:10px;">
+                <p>📸 Imagen actual:</p>
+                <img src="{{ formulario.instance.image.url }}" class="imagen" style="max-width:200px;">
+            </div>
+        {% endif %}
 
         <div style="text-align:center;">
             <button type="submit" class="btn btn-agregar">
@@ -41,7 +50,9 @@
 
 </div>
 
-<a href="{% url 'articulos' %}" class="btn btn-ver">⬅️ Volver</a>
+<div style="text-align:center; margin-top:15px;">
+    <a href="{% url 'articulos' %}" class="btn btn-ver">⬅️ Volver</a>
+</div>
 
 </body>
 </html>
