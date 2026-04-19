@@ -1,1 +1,1 @@
-vr Proyecto Web con Django: Crear modelo de categoría
+vr Proyecto Web con Django: Crear app principal del proyecto
