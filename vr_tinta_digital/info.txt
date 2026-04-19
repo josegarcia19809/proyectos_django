@@ -1,1 +1,1 @@
-vr_tinta_digital: inicio del proyecto
+vr Proyecto Web con Django: Crear modelo de categoría
