@@ -1,1 +1,93 @@
-vr Proyecto Web con Django: Crear app principal del proyecto
+vr Proyecto Web con Django: Crear vistas, urls y templates
+
+Dando estilos al proyecto
+
+
+Crear app para las páginas
+1:57
+Modelo para la entidad de Página
+7:59
+Crear migraciones y tablas
+5:04
+Configurar el panel de administración en Django
+6:17
+Menú dinámico y context processors
+11:15
+Crear vista y url para las páginas
+5:19
+Mostrar datos reales en las páginas y montar el sistema de urls amigables
+4:57
+Solo mostrar páginas visibles
+1:29
+Estilos para las páginas
+2:22
+Mejorar la configuración de rutas
+6:04
+Usar un editor de texto enriquecido en Django
+9:08
+Configuración del editor de texto enriquecido
+2:51
+Modificar el modelo y agregar orden de páginas
+
+
+Crear app para el blog
+2:41
+Crear modelo de categoría
+4:06
+Relaciones entre los modelos
+10:55
+Crear migraciones para modelos relacionados
+3:11
+Cargar modelos en el panel de administración
+6:48
+Guardar usuario sin seleccionarlo
+4:30
+Vista y url para el listado de artículos
+4:11
+La potencia de las relaciones
+7:05
+Separar categorías en las templates
+2:00
+Poder subir imagenes
+6:10
+Menú desplegable de categorías
+9:52
+Cargar categorías reales con un procesador de contexto
+4:04
+Subconsultas en Django
+6:16
+Página para cada categoría
+6:01
+Mostrar error 404
+1:42
+Datos relacionados entre modelos y relaciones inversas
+6:36
+Una página para cada artículo
+6:03
+Cargar imágenes en los artículos
+
+
+Personalizar listados - Parte 1
+5:51
+Personalizar listados - Parte 2
+
+
+
+Como hacer una paginación en Django 3
+
+
+Página de registro
+4:25
+Formulario de registro de usuarios
+6:09
+Formulario de registro personalizado
+9:13
+Mensaje flash en el registro
+4:35
+Página del formulario de login e identificación
+3:35
+Login de usuarios
+5:04
+Mostrar usuario identificado
+4:24
+Cerrar sesión y restringir el acceso
