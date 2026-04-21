@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Crear vistas, urls y templates
+vr Proyecto Web con Django: Dando estilos al proyecto
 
-Dando estilos al proyecto
+
 
 
 Crear app para las páginas
