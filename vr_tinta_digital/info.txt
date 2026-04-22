@@ -1,9 +1,9 @@
-vr Proyecto Web con Django: Dando estilos al proyecto
+vr Proyecto Web con Django: Crear app para las páginas
 
 
 
 
-Crear app para las páginas
+
 1:57
 Modelo para la entidad de Página
 7:59
