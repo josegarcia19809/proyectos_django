@@ -8,7 +8,7 @@ class Page(models.Model):
     slug = models.CharField(max_length=255, verbose_name="Descripcion")
     visible = models.BooleanField(verbose_name="¿Visible?")
     created_at = models.DateTimeField(auto_now_add=True,
-                                      verbose_name="Fecha de creacion"),
+                                      verbose_name="Fecha de creacion")
     updated_at = models.DateTimeField(auto_now=True,
                                       verbose_name="Fecha de actualizacion")
 

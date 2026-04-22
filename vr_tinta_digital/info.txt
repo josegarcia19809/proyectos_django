@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Modelo para la entidad de Página
+vr Proyecto Web con Django: Crear migraciones y tablas
 
-Crear migraciones y tablas
+
 5:04
 Configurar el panel de administración en Django
 6:17
