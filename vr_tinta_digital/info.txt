@@ -1,8 +1,8 @@
-vr Proyecto Web con Django: Menú dinámico y context processors
+vr Proyecto Web con Django: Crear vista y url para las páginas
 
 
 11:15
-Crear vista y url para las páginas
+
 5:19
 Mostrar datos reales en las páginas y montar el sistema de urls amigables
 4:57
