@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Mostrar datos reales en las páginas y montar el sistema de urls amigables
+vr Proyecto Web con Django: Solo mostrar páginas visibles
 
-Solo mostrar páginas visibles
+
 1:29
 Estilos para las páginas
 2:22
