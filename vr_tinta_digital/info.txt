@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Configurar el panel de administración en Django
+vr Proyecto Web con Django: Menú dinámico y context processors
 
-Menú dinámico y context processors
+
 11:15
 Crear vista y url para las páginas
 5:19
