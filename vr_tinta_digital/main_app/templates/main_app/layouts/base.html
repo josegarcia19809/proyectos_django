@@ -59,7 +59,7 @@
 <nav>
     <a href="{% url 'index' %}">Inicio</a>
     {% for page in pages %}
-    <a href="#">{{ page.1 }}</a>
+    <a href="{% url 'page' page.2 %}">{{ page.1 }}</a>
     {% endfor %}
     <a href="{% url 'about' %}">Acerca</a>
 </nav>

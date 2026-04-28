@@ -1,11 +1,5 @@
-vr Proyecto Web con Django: Crear vista y url para las páginas
+vr Proyecto Web con Django: Mostrar datos reales en las páginas y montar el sistema de urls amigables
 
-
-11:15
-
-5:19
-Mostrar datos reales en las páginas y montar el sistema de urls amigables
-4:57
 Solo mostrar páginas visibles
 1:29
 Estilos para las páginas

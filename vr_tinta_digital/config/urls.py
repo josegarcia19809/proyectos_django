@@ -25,6 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('inicio/', views.index, name='inicio'),
-    path('pagina/', pages_views.page, name='page'),
+    path('pagina/<str:slug>', pages_views.page, name='page'),
     path('sobre-nosotros/', views.about, name='about'),
 ]

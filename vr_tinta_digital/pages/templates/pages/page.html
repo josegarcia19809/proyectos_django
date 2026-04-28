@@ -1,10 +1,11 @@
 {% extends 'main_app/layouts/base.html' %}
 
 {% block title %}
-    {{ title }}
+    {{ page.title }}
 {% endblock %}
 
 {% block content %}
-    <h2>{{ title }}</h2>
-    <p>{{ page }}</p>
+    <h2>{{ page.title }}</h2>
+    <span>{{ page.created_at }}</span>
+    <p>{{ page.content }}</p>
 {% endblock %}
