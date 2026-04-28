@@ -1,8 +1,8 @@
-vr Proyecto Web con Django: Solo mostrar páginas visibles
+vr Proyecto Web con Django: Estilos para las páginas
 
 
 1:29
-Estilos para las páginas
+
 2:22
 Mejorar la configuración de rutas
 6:04
