@@ -7,7 +7,9 @@
 {% block content %}
     <h2 class="titulo">{{ page.title }}</h2>
 
-    <span class="fecha">{{ page.created_at }}</span>
+    <span class="fecha">
+    {{ page.created_at|date:"d M Y - H:i" }}
+    </span>
 
     <div class="contenido">
         <p>{{ page.content }}</p>

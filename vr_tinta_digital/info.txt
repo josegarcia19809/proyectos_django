@@ -1,11 +1,5 @@
-vr Proyecto Web con Django: Estilos para las páginas
+vr Proyecto Web con Django: Mejorar la configuración de rutas
 
-
-1:29
-
-2:22
-Mejorar la configuración de rutas
-6:04
 Usar un editor de texto enriquecido en Django
 9:08
 Configuración del editor de texto enriquecido
