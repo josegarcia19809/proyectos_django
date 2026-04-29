@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Mejorar la configuración de rutas
+vr Proyecto Web con Django: Usar un editor de texto enriquecido en Django
 
-Usar un editor de texto enriquecido en Django
+
 9:08
 Configuración del editor de texto enriquecido
 2:51
