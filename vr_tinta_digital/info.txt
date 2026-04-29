@@ -1,10 +1,6 @@
-vr Proyecto Web con Django: Usar un editor de texto enriquecido en Django
+vr Proyecto Web con Django: Modificar el modelo y agregar orden de páginas
 
 
-9:08
-Configuración del editor de texto enriquecido
-2:51
-Modificar el modelo y agregar orden de páginas
 
 
 Crear app para el blog
@@ -71,3 +67,5 @@ Cerrar sesión y restringir el acceso
 
 
 Panel: admin    pass
+
+Configuración del editor de texto enriquecido: https://django-ckeditor.readthedocs.io/en/latest/
