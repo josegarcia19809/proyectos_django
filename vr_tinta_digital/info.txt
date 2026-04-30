@@ -1,14 +1,5 @@
-vr Proyecto Web con Django: Modificar el modelo y agregar orden de páginas
+vr Proyecto Web con Django: Relaciones entre los modelos
 
-
-
-
-Crear app para el blog
-2:41
-Crear modelo de categoría
-4:06
-Relaciones entre los modelos
-10:55
 Crear migraciones para modelos relacionados
 3:11
 Cargar modelos en el panel de administración
