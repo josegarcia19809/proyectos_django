@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Cargar modelos en el panel de administración
+vr Proyecto Web con Django: Guardar usuario sin seleccionarlo
 
-Guardar usuario sin seleccionarlo
+
 4:30
 Vista y url para el listado de artículos
 4:11

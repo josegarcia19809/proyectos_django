@@ -25,7 +25,9 @@ class Article(models.Model):
         null=True, blank=True
     )
     public = models.BooleanField(verbose_name="¿Publicado?")
-    user = models.ForeignKey(User, verbose_name="Usuario", on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name="Usuario",
+                             editable=False, 
+                             on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, verbose_name="Categorías",
                                         blank=True)
     created_at = models.DateTimeField(auto_now_add=True,
