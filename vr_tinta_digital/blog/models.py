@@ -27,7 +27,7 @@ class Article(models.Model):
     public = models.BooleanField(verbose_name="¿Publicado?")
     user = models.ForeignKey(User, verbose_name="Usuario", on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, verbose_name="Categorías",
-                                        null=True, blank=True)
+                                        blank=True)
     created_at = models.DateTimeField(auto_now_add=True,
                                       verbose_name="Fecha de creacion")
     updated_at = models.DateTimeField(auto_now=True,
@@ -38,4 +38,4 @@ class Article(models.Model):
         verbose_name_plural = "Artículos"
 
     def __str__(self):
-        return self.name
+        return self.title

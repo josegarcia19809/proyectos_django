@@ -1,9 +1,5 @@
-vr Proyecto Web con Django: Relaciones entre los modelos
+vr Proyecto Web con Django: Cargar modelos en el panel de administración
 
-Crear migraciones para modelos relacionados
-3:11
-Cargar modelos en el panel de administración
-6:48
 Guardar usuario sin seleccionarlo
 4:30
 Vista y url para el listado de artículos
