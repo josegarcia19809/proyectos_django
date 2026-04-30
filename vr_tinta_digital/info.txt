@@ -1,8 +1,8 @@
-vr Proyecto Web con Django: Guardar usuario sin seleccionarlo
+vr Proyecto Web con Django: Vista y url para el listado de artículos
 
 
 4:30
-Vista y url para el listado de artículos
+
 4:11
 La potencia de las relaciones
 7:05
