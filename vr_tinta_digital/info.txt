@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Página de registro
+vr Proyecto Web con Django: Formulario de registro de usuarios
 
-Formulario de registro de usuarios
+
 6:09
 Formulario de registro personalizado
 9:13
