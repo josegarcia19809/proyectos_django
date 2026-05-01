@@ -71,6 +71,28 @@
         .contenido p {
             margin-bottom: 15px;
         }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -82,9 +104,23 @@
 
 <nav>
     <a href="{% url 'index' %}">Inicio</a>
+
+    <div class="dropdown">
+        <a href="{% url 'list_articles' %}" class="dropbtn">Categorías</a>
+
+        <div class="dropdown-content">
+            {% for categoria in categories %}
+                <a href="{% url 'categoria' categoria.id %}">
+                    {{ categoria.name }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
     {% for page in pages %}
         <a href="{% url 'page' page.2 %}">{{ page.1 }}</a>
     {% endfor %}
+
     <a href="{% url 'about' %}">Acerca</a>
 </nav>
 

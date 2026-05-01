@@ -8,7 +8,9 @@ from blog.models import Category
 
 def list(request):
     articles = Article.objects.all()
+    categories = Category.objects.all()
     return render(request, 'articles/list.html', {
         'title': 'Artículos',
         'articles': articles,
+        'categories': categories,
     })
