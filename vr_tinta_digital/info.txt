@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Personalizar listados
+vr Proyecto Web con Django: Como hacer una paginación en Django 3
 
-Como hacer una paginación en Django 3
+
 
 
 Página de registro
