@@ -1,9 +1,5 @@
-vr Proyecto Web con Django: Cargar categorías reales con un procesador de contexto
+vr Proyecto Web con Django: Subconsultas en Django
 
-
-4:04
-Subconsultas en Django
-6:16
 Página para cada categoría
 6:01
 Mostrar error 404
