@@ -12,5 +12,4 @@ def list(request):
     return render(request, 'articles/list.html', {
         'title': 'Artículos',
         'articles': articles,
-        'categories': categories,
     })

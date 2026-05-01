@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Menú desplegable de categorías
+vr Proyecto Web con Django: Cargar categorías reales con un procesador de contexto
 
-Cargar categorías reales con un procesador de contexto
+
 4:04
 Subconsultas en Django
 6:16

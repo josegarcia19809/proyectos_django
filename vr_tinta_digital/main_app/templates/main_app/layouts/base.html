@@ -80,18 +80,25 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
+            background-color: white;
+            min-width: 150px;
         }
 
         .dropdown-content a {
+            color: black;
             display: block;
             padding: 8px;
-            text-decoration: none;
         }
 
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+
+        nav a:hover {
+            background-color: #00bcd4;
+            color: white;
+            box-shadow: 0 0 10px #00bcd4;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -109,9 +116,9 @@
         <a href="{% url 'list_articles' %}" class="dropbtn">Categorías</a>
 
         <div class="dropdown-content">
-            {% for categoria in categories %}
-                <a href="{% url 'categoria' categoria.id %}">
-                    {{ categoria.name }}
+            {% for category in categories %}
+                <a href="{% url 'index' %}">
+                    {{ category.1 }}
                 </a>
             {% endfor %}
         </div>
