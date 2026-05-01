@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Login de usuarios
+vr Proyecto Web con Django: Mostrar usuario identificado
 
-Mostrar usuario identificado
+
 Cerrar sesión y restringir el acceso
 
 
