@@ -102,12 +102,17 @@
         }
 
         .imagen {
-            width: 200px; /* controla el tamaño */
-            height: 200px; /* opcional, para hacerlo cuadrado */
-            object-fit: cover; /* evita que se deforme */
-            border-radius: 50%; /* hace la imagen circular */
-            display: block;
+            width: 150px; /* tamaño más pequeño */
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* circular */
+            float: left; /* 👈 clave */
+            margin-right: 15px; /* espacio con el texto */
             margin-bottom: 10px;
+        }
+
+        .card {
+            overflow: auto;
         }
     </style>
 </head>
