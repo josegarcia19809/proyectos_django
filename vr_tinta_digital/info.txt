@@ -1,9 +1,5 @@
-vr Proyecto Web con Django: Formulario de registro de usuarios
+vr Proyecto Web con Django: Formulario de registro personalizado
 
-
-6:09
-Formulario de registro personalizado
-9:13
 Mensaje flash en el registro
 4:35
 Página del formulario de login e identificación
