@@ -1,9 +1,5 @@
-vr Proyecto Web con Django: Mensaje flash en el registro
+vr Proyecto Web con Django: Página del formulario de login e identificación
 
-
-4:35
-Página del formulario de login e identificación
-3:35
 Login de usuarios
 5:04
 Mostrar usuario identificado
