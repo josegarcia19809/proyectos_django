@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Subconsultas en Django
+vr Proyecto Web con Django: Página para cada categoría
 
-Página para cada categoría
+
 6:01
 Mostrar error 404
 1:42

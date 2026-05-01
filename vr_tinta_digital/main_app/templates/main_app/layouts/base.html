@@ -117,7 +117,7 @@
 
         <div class="dropdown-content">
             {% for category in categories %}
-                <a href="{% url 'index' %}">
+                <a href="{% url 'category' category.0 %}">
                     {{ category.1 }}
                 </a>
             {% endfor %}

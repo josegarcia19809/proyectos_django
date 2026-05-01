@@ -6,39 +6,6 @@
 
 {% block content %}
     <h2 class="titulo">{{ title }}</h2>
-    <!-- 🔹 Lista de artículos -->
-    {% for article in articles %}
-        <div class="card">
-
-            {% if article.image %}
-                <img src="{{ article.image.url }}" class="imagen"/>
-            {% endif %}
-            <h3>🆔 {{ article.id }} | 🛒 {{ article.title }}</h3>
-            <div>
-                {% for category in article.categories.all %}
-                    {{ category }}
-                    {% if forloop.counter < article.categories.all|length %}
-                        {{ "-" }}
-                    {% endif %}
-                {% endfor %}
-            </div>
-            <p><strong>Creado:</strong> {{ article.created_at }}</p>
-            <p>{{ article.content|safe }}</p>
-            <p>Creado por: <span>{{ article.user.first_name }} {{ article.user.last_name }}</span></p>
-
-
-            {% if article.public %}
-                <p class="activo">✅ Activo</p>
-            {% else %}
-                <p class="inactivo">❌ Inactivo</p>
-            {% endif %}
-
-            <!-- 🔹 Acciones -->
-
-
-        </div>
-    {% empty %}
-        <p style="text-align:center;">No hay artículos registrados 😢</p>
-    {% endfor %}
+    {% include 'articles/articles.html' %}
 
 {% endblock %}
