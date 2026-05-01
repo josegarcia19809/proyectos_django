@@ -5,17 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ title }}</h2>
+    <h2 class="form-title">{{ title }}</h2>
 
-    {{ register_form.errors }}
-    <form method="POST" action="">
-        {% csrf_token %}
+    <div class="form-container">
+        {{ register_form.errors }}
 
-        {% for field in register_form %}
-            {{ field.label }}
-            {{ field }}
-        {% endfor %}
+        <form method="POST" action="">
+            {% csrf_token %}
 
-        <input type="submit" value="Registrarse">
-    </form>
+            {% for field in register_form %}
+                <div class="form-group">
+                    <label>{{ field.label }}</label>
+                    {{ field }}
+                </div>
+            {% endfor %}
+
+            <input type="submit" value="Registrarse" class="btn-submit">
+        </form>
+    </div>
 {% endblock %}
