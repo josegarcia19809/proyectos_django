@@ -1,4 +1,4 @@
-vr Proyecto Web con Django: Cerrar sesión y restringir el acceso
+vr Proyecto Web con Django: Fin de proyecto
 
 
 
