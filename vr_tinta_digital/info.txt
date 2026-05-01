@@ -1,10 +1,4 @@
-vr Proyecto Web con Django: Una página para cada artículo
-
-Personalizar listados - Parte 1
-5:51
-Personalizar listados - Parte 2
-
-
+vr Proyecto Web con Django: Personalizar listados
 
 Como hacer una paginación en Django 3
 
