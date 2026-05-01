@@ -1,9 +1,5 @@
-vr Proyecto Web con Django: Página para cada categoría
+vr Proyecto Web con Django: Mostrar error 404
 
-
-6:01
-Mostrar error 404
-1:42
 Datos relacionados entre modelos y relaciones inversas
 6:36
 Una página para cada artículo
