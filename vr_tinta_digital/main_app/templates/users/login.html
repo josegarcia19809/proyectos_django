@@ -10,21 +10,29 @@
     <div class="form-container">
         {{ register_form.errors }}
 
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <form method="POST" action="">
+            {% csrf_token %}
 
-            <form method="POST" action="">
-                {% csrf_token %}
+            <div class="form-group">
+                <label for="username">👤 Nombre de usuario</label>
+                <input type="text" name="username" placeholder="Ingresa tu usuario" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="username">👤 Nombre de usuario</label>
-                    <input type="text" name="username" placeholder="Ingresa tu usuario" required>
-                </div>
+            <div class="form-group">
+                <label for="password">🔒 Contraseña</label>
+                <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="password">🔒 Contraseña</label>
-                    <input type="password" name="password" placeholder="Ingresa tu contraseña" required>
-                </div>
-
-                <input type="submit" value="Iniciar sesión" class="btn-submit">
-            </form>
+            <input type="submit" value="Iniciar sesión" class="btn-submit">
+        </form>
     </div>
 {% endblock %}

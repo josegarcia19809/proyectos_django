@@ -1,9 +1,6 @@
-vr Proyecto Web con Django: Página del formulario de login e identificación
+vr Proyecto Web con Django: Login de usuarios
 
-Login de usuarios
-5:04
 Mostrar usuario identificado
-4:24
 Cerrar sesión y restringir el acceso
 
 
