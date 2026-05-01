@@ -1,8 +1,6 @@
-vr Proyecto Web con Django: La potencia de las relaciones
+vr Proyecto Web con Django: Poder subir imagenes
 
-Separar categorías en las templates
-2:00
-Poder subir imagenes
+
 6:10
 Menú desplegable de categorías
 9:52

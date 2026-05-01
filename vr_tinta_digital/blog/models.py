@@ -26,7 +26,7 @@ class Article(models.Model):
     )
     public = models.BooleanField(verbose_name="¿Publicado?")
     user = models.ForeignKey(User, verbose_name="Usuario",
-                             editable=False, 
+                             editable=False,
                              on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, verbose_name="Categorías",
                                         blank=True)
@@ -38,6 +38,7 @@ class Article(models.Model):
     class Meta:
         verbose_name = "Artículo"
         verbose_name_plural = "Artículos"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.title
