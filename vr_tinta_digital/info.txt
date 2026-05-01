@@ -1,10 +1,5 @@
-vr Proyecto Web con Django: Como hacer una paginación en Django 3
+vr Proyecto Web con Django: Página de registro
 
-
-
-
-Página de registro
-4:25
 Formulario de registro de usuarios
 6:09
 Formulario de registro personalizado
