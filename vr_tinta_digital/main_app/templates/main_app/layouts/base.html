@@ -69,7 +69,11 @@
         .contenido {
             font-size: 18px;
             line-height: 1.6;
-            color: #333;
+            color: #ddd;
+        }
+
+        .contenido a {
+            color: #fff;
         }
 
         .contenido p {
@@ -290,6 +294,7 @@
         {% endfor %}
 
         <a href="{% url 'about' %}">Acerca</a>
+        <a href="{% url 'logout' %}">Cerrar sesión</a>
 
     {% else %}
         <a href="{% url 'register' %}">Registro</a>

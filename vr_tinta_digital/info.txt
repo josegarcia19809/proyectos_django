@@ -1,7 +1,7 @@
-vr Proyecto Web con Django: Mostrar usuario identificado
+vr Proyecto Web con Django: Cerrar sesión y restringir el acceso
 
 
-Cerrar sesión y restringir el acceso
+
 
 
 Panel: admin    pass
