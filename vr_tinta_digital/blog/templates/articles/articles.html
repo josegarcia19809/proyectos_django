@@ -1,6 +1,6 @@
 <!-- 🔹 Lista de artículos -->
     {% for article in articles %}
-        <div class="card">
+        <div class="card contenido">
 
             {% if article.image %}
                 <img src="{{ article.image.url }}" class="imagen"/>
@@ -8,7 +8,7 @@
             <h3>🆔 {{ article.id }} | 🛒 {{ article.title }}</h3>
             <div>
                 {% for category in article.categories.all %}
-                    {{ category }}
+                    <a href="{% url 'category' category.id %}">{{ category.name }}</a>
                     {% if forloop.counter < article.categories.all|length %}
                         {{ "-" }}
                     {% endif %}

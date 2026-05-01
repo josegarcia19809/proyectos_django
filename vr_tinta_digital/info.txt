@@ -1,6 +1,6 @@
-vr Proyecto Web con Django: Mostrar error 404
+vr Proyecto Web con Django: Datos relacionados entre modelos y relaciones inversas
 
-Datos relacionados entre modelos y relaciones inversas
+
 6:36
 Una página para cada artículo
 6:03

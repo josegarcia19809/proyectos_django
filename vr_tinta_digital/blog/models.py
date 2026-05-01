@@ -29,7 +29,7 @@ class Article(models.Model):
                              editable=False,
                              on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category, verbose_name="Categorías",
-                                        blank=True)
+                                        blank=True, related_name="articles")
     created_at = models.DateTimeField(auto_now_add=True,
                                       verbose_name="Fecha de creacion")
     updated_at = models.DateTimeField(auto_now=True,
