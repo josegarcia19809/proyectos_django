@@ -1,6 +1,87 @@
 {% extends 'reservaciones/layouts/base.html' %}
 
 {% block content %}
-<h2>Bienvenidos a Cocina inteligente</h2>
+
+<div class="container text-center">
+
+    <!-- 🎯 Encabezado principal -->
+    <div class="py-5">
+        <h1 class="display-4 fw-bold">🍽️ Cocina Inteligente</h1>
+        <p class="lead text-muted">
+            Sistema de análisis de reservaciones y gestión de clientes
+        </p>
+    </div>
+
+    <!-- 📊 Cards de acceso rápido -->
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🔥 Horas pico</h5>
+                    <p class="card-text">Identifica los horarios con mayor demanda.</p>
+                    <a href="/reservaciones/horas-pico/" class="btn btn-danger">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">👥 Clientes frecuentes</h5>
+                    <p class="card-text">Conoce a tus clientes más recurrentes.</p>
+                    <a href="/reservaciones/clientes/" class="btn btn-primary">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">📅 Reservaciones</h5>
+                    <p class="card-text">Consulta la actividad diaria.</p>
+                    <a href="/reservaciones/por-dia/" class="btn btn-success">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🚀 Segunda fila -->
+    <div class="row g-4 mt-2">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🪑 Uso de mesas</h5>
+                    <p class="card-text">Optimiza la distribución del restaurante.</p>
+                    <a href="/reservaciones/mesas/" class="btn btn-secondary">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">🚫 No-shows</h5>
+                    <p class="card-text">Detecta pérdidas por ausencias.</p>
+                    <a href="/reservaciones/no-shows/" class="btn btn-dark">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h5 class="card-title">⭐ Calificación</h5>
+                    <p class="card-text">Evalúa la satisfacción del cliente.</p>
+                    <a href="/reservaciones/promedio-calificacion/" class="btn btn-warning">Ver reporte</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 {% endblock %}

@@ -1,36 +1,99 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Reportes Restaurante</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'reservaciones/css/bootstrap.min.css' %}">
+
+    <!-- 🔽 Ajuste de tamaño de letra -->
     <style>
-        body { font-family: Arial; margin: 20px; }
-        table { border-collapse: collapse; width: 50%; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
-        th { background-color: #eee; }
-        a { display: block; margin: 5px 0; }
+        body {
+            font-size: 0.9rem; /* más pequeño */
+        }
     </style>
 </head>
-<body>
 
-<h1>📊 Dashboard de Reportes</h1>
+<body class="bg-light">
 
-<nav>
-    <a href="/reservaciones/horas-pico/">🔥 Horas pico</a>
-    <a href="/reservaciones/por-dia/">📅 Por día</a>
-    <a href="/reservaciones/por-estado/">❌ Por estado</a>
-    <a href="/reservaciones/clientes/">👥 Clientes</a>
-    <a href="/reservaciones/mesas/">🪑 Mesas</a>
-    <a href="/reservaciones/tiempo-promedio/">⏱️ Tiempo promedio</a>
-    <a href="/reservaciones/promedio-personas/">👨‍👩‍👧 Promedio personas</a>
-    <a href="/reservaciones/por-personas/">📊 Por personas</a>
-    <a href="/reservaciones/no-shows/">🚫 No-shows</a>
-    <a href="/reservaciones/por-dia-estado/">📈 Día y estado</a>
-    <a href="/reservaciones/promedio-calificacion/">⭐ Calificación</a>
+<!-- 🔝 Navbar (modo claro) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="/reservaciones/">📊 Reportes</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/horas-pico/">🔥 Horas pico</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/por-dia/">📅 Por día</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/por-estado/">❌ Estado</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/clientes/">👥 Clientes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/mesas/">🪑 Mesas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/tiempo-promedio/">⏱️ Tiempo</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/promedio-personas/">👨‍👩‍👧 Personas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/por-personas/">📊 Por personas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/no-shows/">🚫 No-shows</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/por-dia-estado/">📈 Día/Estado</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/reservaciones/promedio-calificacion/">⭐ Calificación</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
 </nav>
 
-<hr>
+<!-- 📦 Contenido -->
+<div class="container mt-4">
 
-{% block content %}{% endblock %}
+    <!-- Título -->
+    <div class="mb-3">
+        <h4 class="text-center">📊 Dashboard de Reportes</h4>
+        <hr>
+    </div>
+
+    {% block content %}{% endblock %}
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'reservaciones/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 </html>

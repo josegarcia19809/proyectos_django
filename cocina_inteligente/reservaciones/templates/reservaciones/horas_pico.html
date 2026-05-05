@@ -1,19 +1,54 @@
 {% extends 'reservaciones/layouts/base.html' %}
 
 {% block content %}
-<h2>🔥 Horas pico</h2>
 
-<table border="1">
-    <tr>
-        <th>Hora</th>
-        <th>Total</th>
-    </tr>
+    <div class="container">
 
-    {% for fila in data %}
-    <tr>
-        <td>{{ fila.hora_inicio }}</td>
-        <td>{{ fila.total }}</td>
-    </tr>
-    {% endfor %}
-</table>
+        <!-- 🧾 Título -->
+        <div class="mb-4">
+            <h2 class="text-center">🔥 Horas pico</h2>
+        </div>
+
+        <!-- 📊 Card -->
+        <div class="card shadow">
+            <div class="card-header bg-danger text-white">
+                <strong>Horarios con mayor demanda</strong>
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-striped table-hover text-center">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Hora</th>
+                        <th>Reservaciones</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for fila in data %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ fila.hora_inicio }}</td>
+                            <td>
+                            <span class="badge bg-danger">
+                                {{ fila.total }}
+                            </span>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="3">Sin datos disponibles</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}

@@ -1,7 +1,39 @@
 {% extends 'reservaciones/layouts/base.html' %}
 
 {% block content %}
-<h2>⏱️ Tiempo promedio</h2>
 
-<p>{{ data.promedio }}</p>
+    <div class="container">
+
+        <!-- 🧾 Título -->
+        <div class="mb-4 text-center">
+            <h2>⏱️ Tiempo promedio de estancia</h2>
+        </div>
+
+        <!-- 📊 Card KPI -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <div class="card shadow text-center">
+                    <div class="card-header bg-warning text-dark">
+                        <strong>Tiempo promedio</strong>
+                    </div>
+
+                    <div class="card-body">
+
+                        <!-- ⏱️ Valor -->
+                        <h1 class="display-4 text-warning">
+                            {{ data.promedio }}
+                        </h1>
+
+                        <p class="text-muted">Duración promedio por reservación</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}

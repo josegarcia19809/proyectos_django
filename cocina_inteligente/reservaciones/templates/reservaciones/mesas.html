@@ -1,14 +1,62 @@
 {% extends 'reservaciones/layouts/base.html' %}
-{% block content %}
-<h2>🪑 Mesas más utilizadas</h2>
 
-<table>
-<tr><th>Mesa</th><th>Total</th></tr>
-{% for fila in data %}
-<tr>
-<td>{{ fila.mesa__numero_mesa }}</td>
-<td>{{ fila.total }}</td>
-</tr>
-{% endfor %}
-</table>
+{% block content %}
+
+    <div class="container">
+
+        <!-- 🧾 Título -->
+        <div class="mb-4 text-center">
+            <h2>🪑 Mesas más utilizadas</h2>
+        </div>
+
+        <!-- 📊 Card -->
+        <div class="card shadow">
+            <div class="card-header bg-secondary text-white">
+                <strong>Uso de mesas</strong>
+            </div>
+
+            <div class="card-body">
+
+                <table class="table table-striped table-hover text-center">
+                    <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Mesa</th>
+                        <th>Reservaciones</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for fila in data %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+
+                            <!-- 🪑 Número de mesa -->
+                            <td>
+                            <span class="badge bg-dark">
+                                Mesa {{ fila.mesa__numero_mesa }}
+                            </span>
+                            </td>
+
+                            <!-- 🔢 Total -->
+                            <td>
+                            <span class="badge bg-secondary">
+                                {{ fila.total }}
+                            </span>
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="3">Sin datos disponibles</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}

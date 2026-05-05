@@ -1,7 +1,35 @@
 {% extends 'reservaciones/layouts/base.html' %}
 
 {% block content %}
-<h2>🚫 No-shows</h2>
 
-<p>Total: {{ total }}</p>
+    <div class="container">
+
+        <!-- 🧾 Título -->
+        <div class="mb-4 text-center">
+            <h2>🚫 No-shows</h2>
+        </div>
+
+        <!-- 📊 Card -->
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+
+                <div class="card shadow text-center">
+                    <div class="card-header bg-dark text-white">
+                        <strong>Clientes que no asistieron</strong>
+                    </div>
+
+                    <div class="card-body">
+                        <h1 class="display-3 text-danger">
+                            {{ total }}
+                        </h1>
+                        <p class="text-muted">Total de reservaciones no atendidas</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}

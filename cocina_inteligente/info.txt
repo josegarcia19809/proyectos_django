@@ -1,4 +1,4 @@
-Cocina inteligente: creación de templates
+Cocina inteligente: agregando bootstrap
 
 
 
