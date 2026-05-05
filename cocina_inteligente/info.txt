@@ -1,4 +1,4 @@
-Cocina inteligente: importar datos desde la db
+Cocina inteligente: consultas de prueba desde la db
 
 
 

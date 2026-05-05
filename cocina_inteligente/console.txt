@@ -53,4 +53,11 @@ FROM reservaciones_reservacion
 WHERE estado = 'no_show';
 
 -- 📈 10. Reservaciones por día y estado
+SELECT fecha, estado, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY fecha, estado
+ORDER BY fecha;
+
 -- 11. 👥 Promedio de calificación"
+SELECT AVG(calificacion) as promedio_calificacion
+FROM reservaciones_resena;
