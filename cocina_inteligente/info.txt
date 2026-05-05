@@ -1,4 +1,4 @@
-Cocina inteligente: inicio de proyecto
+Cocina inteligente: importar datos desde la db
 
 
 

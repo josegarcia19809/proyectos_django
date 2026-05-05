@@ -1,0 +1,56 @@
+-- Consultas de prueba
+
+-- 🔥 1. Horas con más reservaciones (horas pico)
+SELECT hora_inicio, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY hora_inicio
+ORDER BY COUNT(*) DESC;
+
+
+-- 📅 2. Reservaciones por día
+SELECT fecha, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY fecha
+ORDER BY fecha;
+
+-- ❌ 3. Total por estado (confirmadas, canceladas, no_show)
+SELECT estado, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY estado;
+
+-- 👥 4. Clientes con más reservaciones
+SELECT c.nombre, COUNT(*)
+FROM reservaciones_reservacion r
+         JOIN reservaciones_cliente c ON r.cliente_id = c.id
+GROUP BY c.nombre
+ORDER BY COUNT(*) DESC;
+
+-- 🪑 5. Mesas más utilizadas
+SELECT m.numero_mesa, COUNT(*)
+FROM reservaciones_reservacion r
+         JOIN reservaciones_mesa m ON r.mesa_id = m.id
+GROUP BY m.numero_mesa
+ORDER BY COUNT(*) DESC;
+
+-- ⏱️ 6. Tiempo promedio de estancia
+SELECT AVG((strftime('%s', hora_fin) - strftime('%s', hora_inicio)) / 60.0)
+           as tiempo_promedio_de_estancia
+FROM reservaciones_reservacion;
+
+-- 👨‍👩‍👧 7. Promedio de personas por reservación
+SELECT AVG(numero_personas)
+FROM reservaciones_reservacion;
+
+-- 📊 8. Número de reservaciones por número de personas
+SELECT numero_personas, COUNT(*)
+FROM reservaciones_reservacion
+GROUP BY numero_personas
+ORDER BY numero_personas;
+
+-- 🚫 9. Cantidad de no-shows
+SELECT COUNT(*)
+FROM reservaciones_reservacion
+WHERE estado = 'no_show';
+
+-- 📈 10. Reservaciones por día y estado
+-- 11. 👥 Promedio de calificación"
