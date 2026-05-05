@@ -1,0 +1,20 @@
+Cocina inteligente: inicio de proyecto
+
+
+
+
+
+
+
+Se crearán las siguientes consultas:
+🔥 1. Horas con más reservaciones (horas pico)
+📅 2. Reservaciones por día
+❌ 3. Total por estado (confirmadas, canceladas, no_show)
+👥 4. Clientes con más reservaciones
+🪑 5. Mesas más utilizadas
+⏱️ 6. Tiempo promedio de estancia
+👨‍👩‍👧 7. Promedio de personas por reservación
+📊 8. Número de reservaciones por número de personas
+🚫 9. Cantidad de no-shows
+📈 10. Reservaciones por día y estado
+11. 👥 Promedio de calificación"
