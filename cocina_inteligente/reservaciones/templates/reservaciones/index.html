@@ -2,86 +2,139 @@
 
 {% block content %}
 
-<div class="container text-center">
+    <div class="container text-center">
 
-    <!-- 🎯 Encabezado principal -->
-    <div class="py-5">
-        <h1 class="display-4 fw-bold">🍽️ Cocina Inteligente</h1>
-        <p class="lead text-muted">
-            Sistema de análisis de reservaciones y gestión de clientes
-        </p>
+        <!-- 🎯 Encabezado -->
+        <div class="py-4">
+            <h1 class="fw-bold">🍽️ Cocina Inteligente</h1>
+            <p class="text-muted">Sistema de análisis de reservaciones</p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- 🔥 Horas pico -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🔥 Horas pico</h5>
+                        <p class="card-text">Identifica los horarios con mayor demanda.</p>
+                        <a href="/reservaciones/horas-pico/" class="btn btn-danger">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📅 Por día -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📅 Reservaciones por día</h5>
+                        <p class="card-text">Consulta la actividad diaria del restaurante.</p>
+                        <a href="/reservaciones/por-dia/" class="btn btn-success">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ❌ Por estado -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">❌ Por estado</h5>
+                        <p class="card-text">Analiza confirmaciones, cancelaciones y no-shows.</p>
+                        <a href="/reservaciones/por-estado/" class="btn btn-warning">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👥 Clientes -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">👥 Clientes frecuentes</h5>
+                        <p class="card-text">Identifica a tus clientes más recurrentes.</p>
+                        <a href="/reservaciones/clientes/" class="btn btn-primary">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🪑 Mesas -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🪑 Uso de mesas</h5>
+                        <p class="card-text">Optimiza la distribución de mesas.</p>
+                        <a href="/reservaciones/mesas/" class="btn btn-secondary">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⏱️ Tiempo -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">⏱️ Tiempo promedio</h5>
+                        <p class="card-text">Evalúa la duración promedio de estancia.</p>
+                        <a href="/reservaciones/tiempo-promedio/" class="btn btn-dark">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 👨‍👩‍👧 Promedio personas -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">👨‍👩‍👧 Promedio personas</h5>
+                        <p class="card-text">Conoce el tamaño promedio de los grupos.</p>
+                        <a href="/reservaciones/promedio-personas/" class="btn btn-info">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📊 Por personas -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📊 Por número de personas</h5>
+                        <p class="card-text">Distribución de reservaciones por tamaño de grupo.</p>
+                        <a href="/reservaciones/por-personas/" class="btn btn-primary">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🚫 No-shows -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🚫 No-shows</h5>
+                        <p class="card-text">Detecta pérdidas por clientes ausentes.</p>
+                        <a href="/reservaciones/no-shows/" class="btn btn-danger">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📈 Día y estado -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📈 Día y estado</h5>
+                        <p class="card-text">Analiza reservaciones por fecha y estado.</p>
+                        <a href="/reservaciones/por-dia-estado/" class="btn btn-success">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ⭐ Calificación -->
+            <div class="col-md-4">
+                <div class="card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">⭐ Calificación</h5>
+                        <p class="card-text">Evalúa la satisfacción del cliente.</p>
+                        <a href="/reservaciones/promedio-calificacion/" class="btn btn-warning">Ver reporte</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
-
-    <!-- 📊 Cards de acceso rápido -->
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">🔥 Horas pico</h5>
-                    <p class="card-text">Identifica los horarios con mayor demanda.</p>
-                    <a href="/reservaciones/horas-pico/" class="btn btn-danger">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">👥 Clientes frecuentes</h5>
-                    <p class="card-text">Conoce a tus clientes más recurrentes.</p>
-                    <a href="/reservaciones/clientes/" class="btn btn-primary">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">📅 Reservaciones</h5>
-                    <p class="card-text">Consulta la actividad diaria.</p>
-                    <a href="/reservaciones/por-dia/" class="btn btn-success">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- 🚀 Segunda fila -->
-    <div class="row g-4 mt-2">
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">🪑 Uso de mesas</h5>
-                    <p class="card-text">Optimiza la distribución del restaurante.</p>
-                    <a href="/reservaciones/mesas/" class="btn btn-secondary">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">🚫 No-shows</h5>
-                    <p class="card-text">Detecta pérdidas por ausencias.</p>
-                    <a href="/reservaciones/no-shows/" class="btn btn-dark">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <div class="card-body">
-                    <h5 class="card-title">⭐ Calificación</h5>
-                    <p class="card-text">Evalúa la satisfacción del cliente.</p>
-                    <a href="/reservaciones/promedio-calificacion/" class="btn btn-warning">Ver reporte</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
 
 {% endblock %}

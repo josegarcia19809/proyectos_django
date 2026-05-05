@@ -1,4 +1,4 @@
-Cocina inteligente: agregando bootstrap
+Cocina inteligente: arreglando dashboard de inicio
 
 
 
@@ -17,4 +17,4 @@ Se crearán las siguientes consultas:
 📊 8. Número de reservaciones por número de personas
 🚫 9. Cantidad de no-shows
 📈 10. Reservaciones por día y estado
-11. 👥 Promedio de calificación"
+11. 👥 Promedio de calificación
