@@ -1,0 +1,14 @@
+{% extends 'reservaciones/layouts/base.html' %}
+{% block content %}
+<h2>🪑 Mesas más utilizadas</h2>
+
+<table>
+<tr><th>Mesa</th><th>Total</th></tr>
+{% for fila in data %}
+<tr>
+<td>{{ fila.mesa__numero_mesa }}</td>
+<td>{{ fila.total }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

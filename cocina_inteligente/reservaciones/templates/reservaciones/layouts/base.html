@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reportes Restaurante</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        table { border-collapse: collapse; width: 50%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+        th { background-color: #eee; }
+        a { display: block; margin: 5px 0; }
+    </style>
+</head>
+<body>
+
+<h1>📊 Dashboard de Reportes</h1>
+
+<nav>
+    <a href="/reservaciones/horas-pico/">🔥 Horas pico</a>
+    <a href="/reservaciones/por-dia/">📅 Por día</a>
+    <a href="/reservaciones/por-estado/">❌ Por estado</a>
+    <a href="/reservaciones/clientes/">👥 Clientes</a>
+    <a href="/reservaciones/mesas/">🪑 Mesas</a>
+    <a href="/reservaciones/tiempo-promedio/">⏱️ Tiempo promedio</a>
+    <a href="/reservaciones/promedio-personas/">👨‍👩‍👧 Promedio personas</a>
+    <a href="/reservaciones/por-personas/">📊 Por personas</a>
+    <a href="/reservaciones/no-shows/">🚫 No-shows</a>
+    <a href="/reservaciones/por-dia-estado/">📈 Día y estado</a>
+    <a href="/reservaciones/promedio-calificacion/">⭐ Calificación</a>
+</nav>
+
+<hr>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>

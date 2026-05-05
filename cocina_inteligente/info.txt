@@ -1,4 +1,4 @@
-Cocina inteligente: consultas de prueba desde la db
+Cocina inteligente: creación de templates
 
 
 

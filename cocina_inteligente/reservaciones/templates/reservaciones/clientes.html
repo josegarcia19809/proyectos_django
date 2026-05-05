@@ -1,0 +1,19 @@
+{% extends 'reservaciones/layouts/base.html' %}
+
+{% block content %}
+<h2>👥 Clientes frecuentes</h2>
+
+<table border="1">
+    <tr>
+        <th>Cliente</th>
+        <th>Reservaciones</th>
+    </tr>
+
+    {% for fila in data %}
+    <tr>
+        <td>{{ fila.cliente__nombre }}</td>
+        <td>{{ fila.total }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

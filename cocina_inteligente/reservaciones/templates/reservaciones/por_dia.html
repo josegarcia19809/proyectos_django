@@ -1,0 +1,14 @@
+{% extends 'reservaciones/layouts/base.html' %}
+{% block content %}
+<h2>📅 Reservaciones por día</h2>
+
+<table>
+<tr><th>Fecha</th><th>Total</th></tr>
+{% for fila in data %}
+<tr>
+<td>{{ fila.fecha }}</td>
+<td>{{ fila.total }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
