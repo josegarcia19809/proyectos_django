@@ -32,18 +32,18 @@ from django.contrib.auth.decorators import login_required
 def chart_select_view(request):
     # graph = None
     # error_message = None
-    # df = None
+    df = None
     # price = None
     #
     try:
         product_df = pd.DataFrame(Product.objects.all().values())
         purchase_df = pd.DataFrame(Purchase.objects.all().values())
-    #     product_df['product_id'] = product_df['id']
+        product_df['product_id'] = product_df['id']
     #
     #     if purchase_df.shape[0] > 0:
-    #         df = pd.merge(purchase_df, product_df, on='product_id').drop(
-    #             ['id_y', 'date_y'], axis=1).rename({'id_x': 'id', 'date_x': 'date'},
-    #                                                axis=1)
+        df = pd.merge(purchase_df, product_df, on='product_id').drop(
+            ['id_y', 'date_y'], axis=1).rename({'id_x': 'id', 'date_x': 'date'},
+                                                    axis=1)
     #         price = df['price']
     #         if request.method == 'POST':
     #             chart_type = request.POST.get('sales')
@@ -75,6 +75,7 @@ def chart_select_view(request):
         # 'error_message': error_message,
         'products': product_df.to_html(),
         'purchases': purchase_df.to_html(),
+        'df':df.to_html()
     }
     return render(request, 'products/main.html', context)
 

@@ -1,4 +1,4 @@
-Django with Data Science: Creando el proyecto
+Django with Data Science:  Creating chart selection form
 
 
 
