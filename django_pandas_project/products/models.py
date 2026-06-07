@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+
+
 # Create your models here.
 
 class Product(models.Model):
@@ -21,7 +23,9 @@ class Purchase(models.Model):
 
     def save(self, *args, **kwargs):
         self.total_price = self.price * self.quantity
-        super().save(*args,**kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self):
-        return "Solled {} - {} items for {}".format(self.product.name, self.quantity, self.total_price)
+        return "Se han vendido {} - {} artículos por {}".format(self.product.name,
+                                                                self.quantity,
+                                                                self.total_price)

@@ -3,6 +3,22 @@
 {% block title %}{% endblock title %}
 {% block content %}
     <h1>Hello mundo</h1>
+    <div class="block-center">
+        {% if error_message%}
+            <div class="ui negative message">
+                <i class="close icon"></i>
+                <div class="header">
+                    {{ error_message }}
+                </div>
+            </div>
+        {% endif %}
+
+        {% if request.POST %}
+            {% if graph %}
+                <img src="data:image/png;base64, {{ graph | safe}}">
+            {% endif %}
+        {% endif %}
+    </div>
  <form action="" method="POST" class="ui form mtop">
     {% csrf_token %}
         <div class="field">

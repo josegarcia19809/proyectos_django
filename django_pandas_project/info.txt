@@ -1,4 +1,4 @@
-Django with Data Science:  Creating chart selection form
+Django with Data Science:  Mostrando las gráficas
 
 
 
