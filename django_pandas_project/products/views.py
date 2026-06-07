@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Product, Purchase
 import pandas as pd
 from .utils import get_simple_plot, get_salesman_from_id, get_image
-# from .forms import PurchaseForm
+from .forms import PurchaseForm
 from django.http import HttpResponse
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -13,7 +13,7 @@ def chart_select_view(request):
     graph = None
     error_message = None
     df = None
-    # price = None
+    price = None
     #
     try:
         product_df = pd.DataFrame(Product.objects.all().values())
@@ -48,40 +48,40 @@ def chart_select_view(request):
 
         else:
             error_message = 'No records in the database'
-    except:
+    except Exception as e:
+        print(e)
         product_df = None
         purchase_df = None
         error_message = 'No records in the database'
+
     #
     context = {
         'graph': graph,
-        # 'price': price,
+        'price': price,
         'error_message': error_message,
-        # 'products': product_df.to_html(),
-        # 'purchases': purchase_df.to_html(),
         'df':df
     }
     return render(request, 'products/main.html', context)
 
 
 # @login_required
-# def add_purchase_view(request):
-#     form = PurchaseForm(request.POST or None)
-#     added_message = None
-#
-#     if form.is_valid():
-#         obj = form.save(commit=False)
-#         obj.salesman = request.user
-#         obj.save()
-#
-#         form = PurchaseForm()
-#         added_message = "The purchase has been added"
-#
-#     context = {
-#         'form': form,
-#         'added_message': added_message,
-#     }
-#     return render(request, 'products/add.html', context)
+def add_purchase_view(request):
+    form = PurchaseForm(request.POST or None)
+    added_message = None
+
+    if form.is_valid():
+        obj = form.save(commit=False)
+        obj.salesman = request.user
+        obj.save()
+
+        form = PurchaseForm()
+        added_message = "The purchase has been added"
+
+    context = {
+        'form': form,
+        'added_message': added_message,
+    }
+    return render(request, 'products/add.html', context)
 
 # Create your views here.
 
