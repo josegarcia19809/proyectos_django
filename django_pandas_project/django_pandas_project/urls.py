@@ -23,7 +23,7 @@ urlpatterns = [
     # path('login/', login_view, name='login'),
     # path('logout/', logout_view, name='logout'),
     path('performance/', include('products.urls', namespace='products')),
-    # path('upload/', include('csvs.urls', namespace='csvs')),
+    path('upload/', include('csvs.urls', namespace='csvs')),
     # path('customers/', include('customers.urls', namespace='customers')),
 ]
 

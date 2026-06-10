@@ -1,4 +1,4 @@
-Django with Data Science:  Estadísticas de precios y formulario para agregar nuevas compras
+Django with Data Science:  apartado para subir un archivo csv
 
 
 
