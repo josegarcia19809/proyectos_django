@@ -1,4 +1,4 @@
-Django with Data Science:  apartado para sacar correlaciones Customers
+Django with Data Science:  Crear gráfico de ventas
 
 
 

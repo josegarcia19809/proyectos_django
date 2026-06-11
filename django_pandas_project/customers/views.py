@@ -6,6 +6,7 @@ from .models import Customer
 from products.utils import get_image
 from django.contrib.auth.decorators import login_required
 
+
 # Create your views here.
 # @login_required
 def customer_corr_view(request):
@@ -13,8 +14,9 @@ def customer_corr_view(request):
     corr = round(df['budget'].corr(df['employment']), 2)
 
     plt.switch_backend('Agg')
-    plt.figure(figsize=(12,8))
-    sns.jointplot(x='budget', y='employment', kind='reg', data=df).set_axis_labels('Company budget', 'No of employees')
+    plt.figure(figsize=(12, 8))
+    (sns.jointplot(x='budget', y='employment', kind='reg', data=df)
+     .set_axis_labels('Company budget', 'No of employees'))
     graph = get_image()
 
     context = {
