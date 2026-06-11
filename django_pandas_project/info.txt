@@ -1,5 +1,6 @@
-Django with Data Science:  Creando la página de inicio
+Django with Data Science:  Finalizando el proyecto
 
 
 
 Inicio: 17 de mayo 2026
+Fin: 11 de junio 2026
