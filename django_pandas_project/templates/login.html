@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %}login{% endblock title %}
 
-</body>
-</html>
+{% block content %}
+<div class='block-center'>
+    {% if error_message %}
+        <div class="ui negative message">
+            <i class="close icon"></i>
+            <div class="header">
+                {{ error_message }}
+            </div>
+        </div>
+    {% endif %}
+    <form action="" method="POST" class="ui form" autocomplete="off">
+        {% csrf_token %}
+        {{ form }}
+        <button type='submit' class="ui button positive mtop">Login</button>
+    </form>
+</div>
+{% endblock content %}
