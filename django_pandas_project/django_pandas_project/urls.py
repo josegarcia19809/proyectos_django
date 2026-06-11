@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 
+from django_pandas_project.views import home_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_view, name='home'),
     # path('login/', login_view, name='login'),
     # path('logout/', logout_view, name='logout'),
     path('performance/', include('products.urls', namespace='products')),

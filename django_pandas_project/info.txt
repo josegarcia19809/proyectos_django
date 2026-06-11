@@ -1,4 +1,4 @@
-Django with Data Science:  Crear gráfico de ventas
+Django with Data Science:  Creando la página de inicio
 
 
 
