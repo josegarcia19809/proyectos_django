@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{%  load static %}
+{% load static %}
 {% block title %}
     My Blog
 {% endblock %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "blog/post.css" %}" />
+    <link rel="stylesheet" href="{% static "blog/post.css" %}"/>
     <link rel="stylesheet" href="{% static 'blog/index.css' %}">
 {% endblock %}
 {% block content %}
@@ -15,15 +15,16 @@
             <img src="{% static 'blog/images/programmer.png' %}" alt="">
             <h2>MY BLOG</h2>
         </header>
-     <p>Hi, I am José and I love to blog about tech and the world!</p>
+        <p>Hi, I am José and I love to blog about tech and the world!</p>
     </section>
 
 
     <section id="latest-posts">
         <h2>My Latest Thoughts</h2>
-
         <ul>
-            {% include 'blog/includes/post.html' %}
+            {% for post in posts %}
+                {% include 'blog/includes/post.html' %}
+            {% endfor %}
         </ul>
     </section>
     <section id="about">
