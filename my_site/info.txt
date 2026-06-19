@@ -1,1 +1,1 @@
-MAX. Crear un blog: Agregando los primeros templates y archivos static
+MAX. Crear un blog: Creando la página de detalle y enlaces
