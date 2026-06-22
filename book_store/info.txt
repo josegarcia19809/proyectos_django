@@ -1,1 +1,1 @@
-MAX. Book store (models): Creando el proyecto
+MAX. Book store (models): Agregando datos al modelo
