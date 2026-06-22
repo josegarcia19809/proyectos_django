@@ -1,1 +1,134 @@
-MAX. Book store (models): Agregando datos al modelo
+MAX. Book store (models): Creando varios tipos de Queries
+
+(for_django) josegarcia@Mac-mini-de-Jose book_store % python manage.py shell
+
+>>> from book_outlet.models import Book
+>>> harry = Book.objects.all()[0]
+>>> harry.title
+"The philosopher's Stone"
+>>> harry.author ="J. K. Rowling"
+>>> harry.is_bestselling=True
+>>> harry.save()
+>>> lord = Book.objects.all()[1]
+>>> lord.author= "J. R. R. Tolkien"
+>>> lord.is_bestselling=True
+>>> lord.save()
+>>> harry.delete()
+(1, {'book_outlet.Book': 1})
+>>> Book.objects.create(title="Harry Potter", rating=5, author="J.K. Rowling", is_bestselling=True)
+<Book: Harry Potter (5)>
+
+
+>>> book1 = Book.objects.get(title="Harry Potter")
+>>> book1
+<Book: Harry Potter (5)>
+>>> # Buscar por autor y calificación
+>>> book2 = Book.objects.get(author="Dan Brown", rating=4)
+>>> book2
+<Book: The Da Vinci Code (4)>
+>>> # Filtrar por autor
+>>> books1 = Book.objects.filter(author="J.K. Rowling")
+>>> books1
+<QuerySet [<Book: Harry Potter (5)>]>
+>>> # Filtrar por calificación
+>>> books2 = Book.objects.filter(rating=5)
+>>> books2
+<QuerySet [<Book: Harry Potter (5)>, <Book: The Hobbit (5)>]>
+>>> # Filtrar por autor y libro superventas
+>>> books3 = Book.objects.filter(author="J.K. Rowling", is_bestselling=True)
+>>> books3
+<QuerySet [<Book: Harry Potter (5)>]>
+>>> # Libros con calificación mayor o igual a 4
+>>> books5 = Book.objects.filter(rating__gte=4)
+>>> books5
+<QuerySet [<Book: Lord of the rings (4)>, <Book: Harry Potter (5)>, <Book: The Hobbit (5)>, <Book: Pride and Prejudice (4)>, <Book: The Catcher in the Rye (4)>, <Book: The Da Vinci Code (4)>]>
+>>> # Libros cuyo título contiene la palabra "Harry"
+>>> books6 = Book.objects.filter(title__contains="Harry")
+>>> books6
+<QuerySet [<Book: Harry Potter (5)>]>
+>>> # Libros cuyo autor comienza con "J."
+>>> books7 = Book.objects.filter(author__startswith="J.")
+>>> books7
+<QuerySet [<Book: Lord of the rings (4)>, <Book: Harry Potter (5)>, <Book: The Hobbit (5)>, <Book: The Catcher in the Rye (4)>]>
+
+>>> for book in books7:
+...     print(book.title)
+...
+Lord of the rings
+Harry Potter
+The Hobbit
+The Catcher in the Rye
+>>>
+
+>>> # USAR OR
+>>> from django.db.models import Q
+>>> # Recupera todos los libros cuyo autor sea "J.K. Rowling"
+>>> # o cuya calificación sea igual a 5.
+>>> Book.objects.filter(
+...     Q(author="J.K. Rowling") | Q(rating=5)
+... )
+<QuerySet [<Book: Harry Potter (5)>, <Book: The Hobbit (5)>]>
+>>>
+>>> # Recupera todos los libros que sean superventas
+>>> # o que hayan sido escritos por "Dan Brown".
+>>> Book.objects.filter(
+...     Q(is_bestselling=True) | Q(author="Dan Brown")
+... )
+<QuerySet [<Book: Lord of the rings (4)>, <Book: Harry Potter (5)>, <Book: The Hobbit (5)>, <Book: Pride and Prejudice (4)>, <Book: The Da Vinci Code (4)>]>
+>>>
+>>> # Recupera todos los libros cuyo título sea
+>>> # "Harry Potter" o "The Hobbit".
+>>> Book.objects.filter(
+...     Q(title="Harry Potter") | Q(title="The Hobbit")
+... )
+<QuerySet [<Book: Harry Potter (5)>, <Book: The Hobbit (5)>]>
+>>>
+>>> # Recupera todos los libros cuyo autor sea
+>>> # "J.K. Rowling", "J.R.R. Tolkien" o que tengan
+>>> # una calificación de 5.
+>>> Book.objects.filter(
+...     Q(author="J.K. Rowling") |
+...     Q(author="J.R.R. Tolkien") |
+...     Q(rating=5)
+... )
+<QuerySet [<Book: Harry Potter (5)>, <Book: The Hobbit (5)>]>
+>>>
+>>> # Recupera todos los libros que sean superventas
+>>> # y además hayan sido escritos por "J.K. Rowling"
+>>> # o tengan una calificación de 5.
+>>> Book.objects.filter(
+...     (Q(author="J.K. Rowling") | Q(rating=5)) &
+...     Q(is_bestselling=True)
+... )
+<QuerySet [<Book: Harry Potter (5)>, <Book: The Hobbit (5)>]>
+>>> # Recupera todos los libros que no son superventas.
+>>> Book.objects.filter(
+...     ~Q(is_bestselling=True)
+... )
+<QuerySet [<Book: The Catcher in the Rye (4)>]>
+>>>
+>>> # Muestra cada libro encontrado.
+>>> for book in Book.objects.filter(Q(rating=5) | Q(is_bestselling=True)):
+...     print(book)
+...
+Lord of the rings (4)
+Harry Potter (5)
+The Hobbit (5)
+Pride and Prejudice (4)
+The Da Vinci Code (4)
+>>>
+>>>
+>>> # Convierte el QuerySet a una lista y la muestra.
+>>> list(Book.objects.filter(Q(author="Dan Brown") | Q(rating=4)))
+[<Book: Lord of the rings (4)>, <Book: Pride and Prejudice (4)>, <Book: The Catcher in the Rye (4)>, <Book: The Da Vinci Code (4)>]
+>>>
+
+
+Bulk Operations
+Besides operations on individual model instances (i.e. deleting one model instance, updating one model instance etc), you can also perform bulk operations:
+
+You can delete multiple model instances (i.e. database records) at once: https://docs.djangoproject.com/en/3.1/topics/db/queries/#deleting-objects
+
+You can update multiple model instances (i.e. database records) at once: https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update
+
+You can create multiple model instances (i.e. database records) at once: https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create
