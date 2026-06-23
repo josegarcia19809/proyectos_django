@@ -1,4 +1,4 @@
-MAX. Book store (models): Creando varios tipos de Queries
+MAX. Book store (models): Creando templates y recuperando el libro por id
 
 (for_django) josegarcia@Mac-mini-de-Jose book_store % python manage.py shell
 
@@ -132,3 +132,16 @@ You can delete multiple model instances (i.e. database records) at once: https:/
 You can update multiple model instances (i.e. database records) at once: https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-update
 
 You can create multiple model instances (i.e. database records) at once: https://docs.djangoproject.com/en/3.0/ref/models/querysets/#bulk-create
+
+
+Se vuelven a guardar los objetos para que se generen los slugs
+ # Recupera el libro "Pride and Prejudice" y lo guarda nuevamente.
+>>> Book.objects.get(title="Pride and Prejudice").save()
+>>>
+>>> # Recupera el libro "The Catcher in the Rye" y lo guarda nuevamente.
+>>> Book.objects.get(title="The Catcher in the Rye").save()
+>>>
+>>> # Recupera el libro "The Da Vinci Code" y lo guarda nuevamente.
+>>> Book.objects.get(title="The Da Vinci Code").save()
+>>> Book.objects.get(title="Lord of the rings").save()
+
