@@ -1,4 +1,4 @@
-MAX. Book store (models): Creando templates y recuperando el libro por id
+MAX. Book store (models): Recuperando el libro por id, agregación y ordenamiento
 
 (for_django) josegarcia@Mac-mini-de-Jose book_store % python manage.py shell
 
