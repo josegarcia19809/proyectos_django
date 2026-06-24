@@ -1,4 +1,4 @@
-MAX. Book store (models): Recuperando el libro por id, agregación y ordenamiento
+MAX. Book store (admin): Apartado del administrador
 
 (for_django) josegarcia@Mac-mini-de-Jose book_store % python manage.py shell
 
