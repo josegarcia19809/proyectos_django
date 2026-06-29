@@ -1,0 +1,165 @@
+>>> from book_outlet.models import Book, Author
+>>> author = Author.objects.create(
+...     first_name="Gabriel",
+...     last_name="García Márquez"
+... )
+>>>
+>>> Book.objects.create(
+...     title="Cien años de soledad",
+...     rating=5,
+...     author=author,
+...     slug="cien-anos-de-soledad"
+... )
+<Book: Cien años de soledad (5)>
+>>>
+>>> Book.objects.create(
+...     title="El coronel no tiene quien le escriba",
+...     rating=4,
+...     author=author,
+...     slug="el-coronel-no-tiene-quien-le-escriba"
+... )
+<Book: El coronel no tiene quien le escriba (4)>
+>>> # Acceder al autor desde un libro
+>>> book = Book.objects.get(id=1)
+>>>
+>>> print(book.title)
+Cien años de soledad
+>>> print(book.author.first_name)
+Gabriel
+>>> print(book.author.last_name)
+García Márquez
+>>> # Acceder a los libros de un autor
+>>> author = Author.objects.get(id=1)
+>>>
+>>> books = author.book_set.all()
+>>>
+>>> for book in books:
+...     print(book.title)
+...
+Cien años de soledad
+El coronel no tiene quien le escriba
+>>>
+
+
+>>> # Filtra los libros cuyo autor tenga el apellido "García Márquez".
+>>> # author__last_name accede al campo last_name del modelo Author
+>>> # a través de la clave foránea author.
+
+>>> books = Book.objects.filter(author__last_name="García Márquez")
+>>> for book in books:
+...     print(f"Título: {book.title}")
+...     print(f"Autor: {book.author.first_name} {book.author.last_name}")
+...     print(f"Calificación: {book.rating}")
+...     print("-" * 30)
+...
+Título: Cien años de soledad
+Autor: Gabriel García Márquez
+Calificación: 5
+------------------------------
+Título: El coronel no tiene quien le escriba
+Autor: Gabriel García Márquez
+Calificación: 4
+------------------------------
+
+
+book_set es el nombre que Django crea automáticamente para acceder a todos los objetos relacionados desde el otro lado de una relación ForeignKey.
+
+En tus modelos:
+
+class Author(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+
+La relación es:
+
+Un Author puede tener muchos Book.
+Un Book pertenece a un Author.
+
+Como Book tiene una clave foránea hacia Author, Django agrega automáticamente el atributo book_set al modelo Author.
+
+Ejemplo
+
+Supongamos que tienes este autor:
+
+author = Author.objects.get(last_name="García")
+
+Para obtener todos sus libros:
+
+books = author.book_set.all()
+
+for book in books:
+    print(book.title)
+
+Salida:
+
+Cien años de soledad
+El coronel no tiene quien le escriba
+¿Por qué se llama book_set?
+
+Django sigue la convención:
+
+nombre_del_modelo_en_minúsculas + _set
+
+Por ejemplo:
+
+Modelo	Nombre generado
+Book	book_set
+Movie	movie_set
+Student	student_set
+¿Qué métodos tiene book_set?
+
+Como book_set es un Manager, puedes hacer casi cualquier consulta del ORM:
+
+# Todos los libros
+author.book_set.all()
+
+# Filtrar
+author.book_set.filter(rating=5)
+
+# Contar
+author.book_set.count()
+
+# Obtener uno
+author.book_set.get(id=1)
+
+# Ordenar
+author.book_set.order_by("title")
+¿Se puede cambiar el nombre?
+
+Sí. Lo recomendable es usar related_name.
+
+class Book(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(
+        Author,
+        on_delete=models.CASCADE,
+        related_name="books"
+    )
+
+Ahora, en lugar de:
+
+author.book_set.all()
+
+puedes escribir:
+
+author.books.all()
+
+que resulta más natural y legible.
+
+Resumen
+book_set es un manager que Django crea automáticamente para acceder a los libros de un autor.
+Solo existe porque Book tiene un ForeignKey hacia Author.
+Permite realizar consultas como .all(), .filter(), .count(), etc.
+Es una buena práctica reemplazar book_set por un nombre más descriptivo usando related_name, por ejemplo books.
+
+>>> from book_outlet.models import Book, Author
+>>> gabriel = Author.objects.get(first_name="Gabriel")
+>>> gabriel.books.all()
+<QuerySet [<Book: Cien años de soledad (5)>, <Book: El coronel no tiene quien le escriba (4)>]>
+>>> gabriel.books.filter(rating__gt=3)
+<QuerySet [<Book: Cien años de soledad (5)>, <Book: El coronel no tiene quien le escriba (4)>]>
+>>> 
