@@ -1,0 +1,12 @@
+>>> from book_outlet.models import Book, Author, Address
+>>> addr1 = Address(street="Some Street", postal_code="12345", city="London")
+>>> addr1.save()
+>>> gabriel = Author.objects.get(first_name="Gabriel")
+>>> gabriel.address = addr1
+>>> gabriel.save()
+>>> gabriel.address.street
+'Some Street'
+>>> Address.objects.all()[0].author.first_name
+'Gabriel'
+>>> Address.objects.all()[0].author.last_name
+'García Márquez'

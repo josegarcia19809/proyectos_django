@@ -1,2 +1,2 @@
-MAX. Book store (Relationships): Relación 1 a muchos: Libros y autores
+MAX. Book store (Relationships): Relación 1 a 1: autores y direcciones
 
