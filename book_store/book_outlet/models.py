@@ -3,6 +3,16 @@ from django.db import models
 from django.urls import reverse
 
 
+class Country(models.Model):
+    name = models.CharField(max_length=100)
+    code = models.CharField(max_length=3)
+
+    def __str__(self):
+        return f"{self.name}"
+
+    class Meta:
+        verbose_name_plural = "Countries"
+
 # Create your models here.
 class Address(models.Model):
     street = models.CharField(max_length=200)
@@ -36,6 +46,8 @@ class Book(models.Model):
     is_bestselling = models.BooleanField(default=False)
     slug = models.SlugField(default="", blank=True,
                             null=False, db_index=True)
+    published_countries = models.ManyToManyField(Country, null=False,
+                                                 related_name="books")
 
     def get_absolute_url(self):
         return reverse("book-detail", args=[self.slug])

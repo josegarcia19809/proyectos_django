@@ -1,0 +1,17 @@
+>>> from book_outlet.models import Book, Country
+>>> cien = Book.objects.all()[0]
+>>> cien.published_countries
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x10349d810>
+>>> colombia = Country(name="Colombia", code="CO")
+>>> colombia.save()
+>>> cien.published_countries.add(colombia)
+>>> cien.published_countries.all()
+<QuerySet [<Country: Colombia>]>
+>>> Country.objects.all()
+<QuerySet [<Country: Colombia>]>
+>>> colombia = Country.objects.all()[0]
+>>> colombia.book_set.all()
+<QuerySet [<Book: Cien años de soledad (5)>]>
+
+>>> colombia.books.all()
+<QuerySet [<Book: Cien años de soledad (5)>]>

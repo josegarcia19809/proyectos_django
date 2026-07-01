@@ -1,0 +1,165 @@
+En Django, una relación perezosa (Lazy Relationship) consiste en escribir el nombre del modelo como una cadena de texto ('Modelo') en lugar de hacer una referencia directa al modelo. Esto permite que Django resuelva la relación más tarde, cuando todos los modelos ya han sido cargados.
+
+Esto es útil en tres situaciones comunes.
+
+1. Dos modelos con una relación circular
+
+Una relación circular ocurre cuando dos modelos dependen uno del otro.
+
+Por ejemplo:
+
+class Product(models.Model):
+    last_buyer = models.ForeignKey('User', on_delete=models.CASCADE)
+
+class User(models.Model):
+    created_products = models.ManyToManyField('Product')
+
+Aquí ocurre lo siguiente:
+
+Un Product necesita saber quién fue su último comprador (User).
+Un User necesita saber qué productos ha creado (Product).
+
+Es decir:
+
+Product  -------> User
+   ^               |
+   |               |
+   +---------------+
+
+Si escribiéramos:
+
+last_buyer = models.ForeignKey(User)
+
+Django intentaría encontrar la clase User inmediatamente. Pero si User aún no ha sido definida, aparecería un error.
+
+Por eso se escribe:
+
+last_buyer = models.ForeignKey('User')
+
+Al usar 'User' como texto, Django espera hasta que todos los modelos hayan sido cargados y entonces resuelve la referencia.
+
+Ejemplo basado en una farmacia
+class Medicamento(models.Model):
+    nombre = models.CharField(max_length=100)
+    ultimo_cliente = models.ForeignKey(
+        'Cliente',
+        on_delete=models.SET_NULL,
+        null=True
+    )
+
+class Cliente(models.Model):
+    nombre = models.CharField(max_length=100)
+    medicamentos_comprados = models.ManyToManyField('Medicamento')
+
+Relación:
+
+Un medicamento recuerda quién fue el último cliente que lo compró.
+Un cliente puede comprar muchos medicamentos.
+2. Un modelo relacionado consigo mismo
+
+A veces un modelo necesita relacionarse con otros registros del mismo tipo.
+
+Ejemplo del texto:
+
+class User(models.Model):
+    friends = models.ManyToManyField('self')
+
+La palabra especial:
+
+'self'
+
+significa:
+
+"Relaciona este modelo consigo mismo."
+
+Ejemplo
+
+Supongamos una red social.
+
+class Usuario(models.Model):
+    nombre = models.CharField(max_length=100)
+    amigos = models.ManyToManyField('self')
+
+Podemos tener:
+
+Carlos
+   |
+   +------ Ana
+   |
+   +------ Pedro
+
+Carlos tiene como amigos a Ana y Pedro, todos almacenados en la misma tabla.
+
+Otro ejemplo en una farmacia:
+
+class Empleado(models.Model):
+    nombre = models.CharField(max_length=100)
+    supervisores = models.ManyToManyField('self')
+
+Aquí un empleado puede tener uno o varios supervisores que también son empleados.
+
+3. Relacionarse con modelos de otra aplicación
+
+En Django un proyecto puede tener varias aplicaciones.
+
+Por ejemplo:
+
+mi_proyecto/
+    farmacia/
+    ventas/
+    inventario/
+
+Supongamos que el modelo Producto está dentro de la aplicación inventario.
+
+Entonces desde otra aplicación podemos hacer:
+
+class Venta(models.Model):
+    producto = models.ForeignKey(
+        'inventario.Producto',
+        on_delete=models.CASCADE
+    )
+
+La sintaxis es:
+
+'app.Modelo'
+
+Es decir:
+
+nombre_de_la_aplicación.nombre_del_modelo
+Ejemplo
+
+Aplicación inventario
+
+class Producto(models.Model):
+    nombre = models.CharField(max_length=100)
+
+Aplicación ventas
+
+class Venta(models.Model):
+    producto = models.ForeignKey(
+        'inventario.Producto',
+        on_delete=models.CASCADE
+    )
+
+Aunque Producto esté definido en otra aplicación, Django puede encontrarlo gracias a:
+
+'inventario.Producto'
+¿Por qué se llaman relaciones "Lazy"?
+
+Porque Django no busca inmediatamente el modelo.
+
+En lugar de eso:
+
+Lee el texto 'User', 'Producto' o 'self'.
+Continúa cargando todos los modelos del proyecto.
+Cuando ya conoce todos los modelos, reemplaza ese texto por la clase correspondiente.
+
+Es decir, la relación se resuelve más tarde, de forma "perezosa" (lazy).
+
+Resumen
+Situación	Cómo se escribe
+Dos modelos que dependen entre sí	'User', 'Product'
+Un modelo relacionado consigo mismo	'self'
+Un modelo de otra aplicación	'app.Modelo'
+
+La ventaja principal de las Lazy Relationships es que evitan errores cuando un modelo aún no ha sido definido, permiten crear relaciones circulares, facilitan las relaciones consigo mismo y hacen posible referenciar modelos ubicados en otras aplicaciones del proyecto Django.
