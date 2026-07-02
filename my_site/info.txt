@@ -1,1 +1,5 @@
-MAX. Crear un blog: Mandando datos a las vistas
+MAX. Crear un blog: Creando los models y agregando el panel de administración
+
+
+josegarcia
+pass
