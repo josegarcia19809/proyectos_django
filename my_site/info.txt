@@ -1,4 +1,4 @@
-MAX. Crear un blog: Creando los models y agregando el panel de administración
+MAX. Crear un blog: Agregando la información de los models a los templates
 
 
 josegarcia
