@@ -1,1 +1,1 @@
-Max - Forms: Gestión del envío de formularios y extracción de datos
+Max - Forms: Validación manual de formularios y los problemas con "eso".
