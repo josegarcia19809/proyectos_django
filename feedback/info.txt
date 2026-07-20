@@ -1,1 +1,1 @@
-Max - Forms: Uso de la clase Django Form
+Max - Forms: Agregar más controles de formulario
