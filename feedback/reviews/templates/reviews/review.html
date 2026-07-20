@@ -1,17 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Your Review</title>
+    <link rel="stylesheet" href="{% static 'reviews/styles.css' %}">
 </head>
 <body>
 <form action="/" method="POST">
     {% csrf_token %}
-    {% if has_error %}
-    <p>This form is invalid - please enter a valid username</p>
-    {% endif %}
-    <label for="username">Your name</label>
-    <input type="text" id="username" name="username" placeholder="Your name" required>
+    <div class="form-control {% if form.user_name.errors %} errors {% endif %}">
+        {{ form.user_name.label_tag }}
+        {{ form.user_name }}
+        {{ form.user_name.errors }}
+    </div>
     <button type="submit">Send</button>
 </form>
 

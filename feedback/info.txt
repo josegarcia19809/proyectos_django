@@ -1,1 +1,1 @@
-Max - Forms: Validación manual de formularios y los problemas con "eso".
+Max - Forms: Uso de la clase Django Form
