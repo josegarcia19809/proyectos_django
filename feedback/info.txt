@@ -1,1 +1,1 @@
-Max - Forms: Almacenamiento de datos de formularios en una base de datos
+Max - Forms: Guardar datos con un formulario de modelo
