@@ -1,1 +1,1 @@
-Max - Forms: Guardar datos con un formulario de modelo
+Max - Forms: Vistas de clase
