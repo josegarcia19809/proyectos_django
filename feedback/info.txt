@@ -1,1 +1,1 @@
-Max - Carga de archivos: Uso de modelos para el almacenamiento de archivos
+Max - Carga de archivos: Servir archivos subidos
