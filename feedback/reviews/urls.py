@@ -10,6 +10,7 @@ urlpatterns = [
     path('thank-you', views.ThankYouView.as_view(), name='thank_you'),
     path('reviews', views.ReviewsListView.as_view(), name='reviews'),
     path('reviews2', views.ReviewsListView2.as_view(), name='reviews2'),
+    path('reviews/favorite', views.AddFavoriteView.as_view(), name='add_favorite'),
     path('reviews/<int:id>', views.SingleReviewView.as_view(), name='reviews_id'),
     path('reviews2/<int:pk>', views.SingleReviewView2.as_view(), name='reviews_id2'),
 ]

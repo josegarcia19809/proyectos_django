@@ -1,1 +1,1 @@
-Max - Carga de archivos: Servir archivos subidos
+Max - Sesiones: Almacenamiento de datos en sesiones
