@@ -1,1 +1,1 @@
-Max - Forms: Vistas de clase
+Max - Carga de archivos: Cómo hacer que la carga de archivos funcione
