@@ -1,4 +1,4 @@
-MAX. Crear un blog: Agregando la información de los models a los templates
+MAX. Crear un blog: formularios, archivos y sesiones
 
 
 josegarcia
